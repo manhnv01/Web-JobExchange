@@ -11,6 +11,6 @@
 ## Sơ đồ phân rã chức năng
 ![image](https://github.com/manhnv01/Web-JobExchange/assets/88828150/144230d4-2394-43fa-bb00-7f78fea79737)
 
-## Cơ sơ dữ liệu
+## Cơ sở dữ liệu
 ![image](https://github.com/manhnv01/Web-JobExchange/assets/88828150/3bc1365e-ae25-4b53-885d-0fc2c874c9dc)
 

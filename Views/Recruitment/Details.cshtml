@@ -1,0 +1,200 @@
+﻿@model JobExchange.Models.Recruitment
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<style>
+    .box-item {
+        align-items: center;
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    .box-info {
+        background: white;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        padding: 20px;
+    }
+
+    .box-address {
+        background: white;
+        border-radius: 8px;
+        color: #212f3f;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 24px;
+        padding: 20px;
+    }
+
+    .box-item img {
+        height: 40px;
+        margin-right: 16px;
+        width: 40px;
+    }
+
+    .box-main {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+</style>
+
+<div class="mb-3">
+    <h1 class="h3 d-inline align-middle">Chi tiết tin tuyển dụng</h1>
+</div>
+
+<div class="box-info">
+    <p class="h4 box-detail-title">@Html.DisplayFor(model => model.RecruitmentTitle)</p>
+    <div class="col-md-12">
+        <hr />
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Mức Lương</label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-usd-circle" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.Salary)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Số lượng tuyển <span class="text-danger">*</span></label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-user-friends" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.HiringCount)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Hình thức làm việc <span class="text-danger">*</span></label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-briefcase" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.WorkType)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Cấp bậc <span class="text-danger">*</span></label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-award" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.PositionLevel)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Giới tính</label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-user" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.GenderRequirement)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Kinh nghiệm</label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-hourglass-half" style="color: #000000;"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.Experience)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Ngày hết hạn <span class="text-danger">*</span></label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-calendar-alt text-black"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.ExpirationDate)
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb-3">
+                    <label class="control-label mb-2">Lĩnh vực cần tuyển <span class="text-danger">*</span></label>
+                    <div class="input-group w-auto">
+                        <span class="btn" style="background-color: #f4f5f5;">
+                            <i class="fal fa-industry-alt text-black"></i>
+                        </span>
+                        <button class="btn" style="background-color: transparent;">
+                            @Html.DisplayFor(model => model.Industry.IndustryName)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-address">
+    <p class="box-detail-title">Địa điểm làm việc</p>
+    <div>
+        <div style="margin-bottom: 10px">- @Html.DisplayFor(model => model.City): @Html.DisplayFor(model => model.AddressDetail), @Html.DisplayFor(model => model.Ward), @Html.DisplayFor(model => model.District), @Html.DisplayFor(model => model.City)</div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="job-data">
+        <h4>Mô tả công việc</h4>
+        <div class="content-tab">
+            <p>@Html.DisplayFor(model => model.JobDescription)</p>
+        </div>
+        <h4>Yêu cầu ứng viên</h4>
+        <div class="content-tab">
+            <p> @Html.DisplayFor(model => model.CandidateRequirement)</p>
+        </div>
+        <h4>Quyền lợi</h4>
+        <div class="content-tab">
+            <p> @Html.DisplayFor(model => model.Benefit)</p>
+        </div>
+        <h4>Chi tiết tin tuyển dụng</h4>
+        <div class="content-tab">
+            <div class="row">
+                <div class="col-sm-12">
+                    Ngày đăng tin: @Html.DisplayFor(model => model.CreatedAt)
+                </div>
+                <div class="col-sm-12">
+                    Ngày sửa cuối: @Html.DisplayFor(model => model.UpdatedAt)
+                </div>
+            </div>
+        </div>
+        <div class="form-group mb-3 mt-3">
+            <a asp-action="Edit" asp-route-id="@Model?.RecruitmentId" class="btn btn-primary">Cập nhật</a>
+            <a asp-controller="Recruitment" asp-action="Index" class="btn btn-secondary">Quay lại</a>
+        </div>
+    </div>
+</div>

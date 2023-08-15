@@ -1,0 +1,478 @@
+﻿@using JobExchange.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<JobExchangeUser> SignInManager
+@inject UserManager<JobExchangeUser> UserManager
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="main">
+    <div id="hero-wraper" class="page-job-news">
+        <div id="section-header">
+            <div class="container">
+                <div class="header-box">
+                    <h1 class="title">Tìm việc làm nhanh 24h, việc làm mới nhất trên toàn quốc.</h1>
+                    <p class="description">
+                        Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh
+                        nghiệp uy tín tại Việt Nam
+                    </p>
+                </div>
+                <form id="frm-search-job" method="GET" onsubmit="return false;" class="row">
+                    <div class="group-search col-md-8 col-sm-12" style="width: 100%">
+                        <div class="item item-search">
+                            <img class="icon" src="~/images/icon-header-svg/search-icon.svg" alt="">
+                            <input class="form-controlui-autocomplete-input" value="" style="width: 100%;"
+                                   placeholder="Tên công việc, vị trí ứng tuyển..." id="keyword" autocomplete="off">
+                        </div>
+                        @*<div class="item search-city">
+                            <img class="icon" src="~/images/icon-header-svg/location-icon.svg" alt="">
+                            <select name="city" id="city" class="form-control select2">
+                                <option value="">Tất cả tỉnh/thành phố</option>
+                                <option value="1">Hà Nội</option>
+                                <option value="2">Hồ Chí Minh</option>
+                                <option value="3">Bình Dương</option>
+                                <option value="4">Bắc Ninh</option>
+                                <option value="5">Đồng Nai</option>
+                                <option value="6">Hưng Yên</option>
+                                <option value="7">Hải Dương</option>
+                                <option value="8">Đà Nẵng</option>
+                                <option value="9">Hải Phòng</option>
+                                <option value="10">An Giang</option>
+                                <option value="11">Bà Rịa-Vũng Tàu</option>
+                                <option value="12">Bắc Giang</option>
+                                <option value="13">Bắc Kạn</option>
+                                <option value="14">Bạc Liêu</option>
+                                <option value="15">Bến Tre</option>
+                                <option value="16">Bình Định</option>
+                                <option value="17">Bình Phước</option>
+                                <option value="18">Bình Thuận</option>
+                                <option value="19">Cà Mau</option>
+                                <option value="20">Cần Thơ</option>
+                                <option value="21">Cao Bằng</option>
+                                <option value="22">Cửu Long</option>
+                                <option value="23">Đắk Lắk</option>
+                                <option value="24">Đắc Nông</option>
+                                <option value="25">Điện Biên</option>
+                                <option value="26">Đồng Tháp</option>
+                                <option value="27">Gia Lai</option>
+                                <option value="28">Hà Giang</option>
+                                <option value="29">Hà Nam</option>
+                                <option value="30">Hà Tĩnh</option>
+                                <option value="31">Hậu Giang</option>
+                                <option value="32">Hoà Bình</option>
+                                <option value="33">Khánh Hoà</option>
+                                <option value="34">Kiên Giang</option>
+                                <option value="35">Kon Tum</option>
+                                <option value="36">Lai Châu</option>
+                                <option value="37">Lâm Đồng</option>
+                                <option value="38">Lạng Sơn</option>
+                                <option value="39">Lào Cai</option>
+                                <option value="40">Long An</option>
+                                <option value="41">Miền Bắc</option>
+                                <option value="42">Miền Nam</option>
+                                <option value="43">Miền Trung</option>
+                                <option value="44">Nam Định</option>
+                                <option value="45">Nghệ An</option>
+                                <option value="46">Ninh Bình</option>
+                                <option value="47">Ninh Thuận</option>
+                                <option value="48">Phú Thọ</option>
+                                <option value="49">Phú Yên</option>
+                                <option value="50">Quảng Bình</option>
+                                <option value="51">Quảng Nam</option>
+                                <option value="52">Quảng Ngãi</option>
+                                <option value="53">Quảng Ninh</option>
+                                <option value="54">Quảng Trị</option>
+                                <option value="55">Sóc Trăng</option>
+                                <option value="56">Sơn La</option>
+                                <option value="57">Tây Ninh</option>
+                                <option value="58">Thái Bình</option>
+                                <option value="59">Thái Nguyên</option>
+                                <option value="60">Thanh Hoá</option>
+                                <option value="61">Thừa Thiên Huế</option>
+                                <option value="62">Tiền Giang</option>
+                                <option value="63">Toàn Quốc</option>
+                                <option value="64">Trà Vinh</option>
+                                <option value="65">Tuyên Quang</option>
+                                <option value="66">Vĩnh Long</option>
+                                <option value="67">Vĩnh Phúc</option>
+                                <option value="68">Yên Bái</option>
+                                <option value="100">Nước Ngoài</option>
+                            </select>
+                        </div>*@
+                    </div>
+                   
+                   @* <div class="group">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fa-light fa-circle-star"></i>
+                            </div>
+                            <select name="exp" id="exp-advanced" class="form-control select2">
+                                <option value="">Tất cả kinh nghiệm</option>
+                                <option value="1">Chưa có kinh nghiệm</option>
+                                <option value="2">Dưới 1 năm</option>
+                                <option value="3">1 năm</option>
+                                <option value="4">2 năm</option>
+                                <option value="5">3 năm</option>
+                                <option value="6">4 năm</option>
+                                <option value="7">5 năm</option>
+                                <option value="8">Trên 5 năm</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="~/images/icon-header-svg/dollar-icon.svg" alt="">
+                            <select name="salary-advanced" id="salary-advanced" class="form-control select2">
+                                <option value="">Tất cả mức lương</option>
+                                <option value="1">Dưới 3 triệu</option>
+                                <option value="2">3 - 5 triệu</option>
+                                <option value="3">5 - 7 triệu</option>
+                                <option value="4">7 - 10 triệu</option>
+                                <option value="5">10 - 12 triệu</option>
+                                <option value="6">12 - 15 triệu</option>
+                                <option value="7">15 - 20 triệu</option>
+                                <option value="8">20 - 25 triệu</option>
+                                <option value="9">25 - 30 triệu</option>
+                                <option value="10">Trên 30 triệu</option>
+                                <option value="127">Thoả thuận</option>
+                            </select>
+                        </div>
+                    </div>*@
+                    <div class="col-button col-md-4 col-sm-12">
+                        <button class="btn btn-topcv btn-search-job" id="search-job">Tìm kiếm</button>
+                    </div>
+                </form>
+                @*<div class="box-work-market">
+                    <div class="header">
+                        <i class="fa-regular fa-calendar-star"></i>
+                        <span>
+                            Thị trường việc làm hôm nay:
+                        </span>
+                        <span class="date">11/07/2023</span>
+                    </div>
+                    <a href="#">
+                        <div class="content">
+                            <div class="box-data-job">
+                                <div class="job-hiring">
+                                    <p>Vị trí đang chờ bạn khám phá</p>
+                                    <div class="box-quantity">
+                                        <span class="quantity" name="quantity_job_recruitment">
+                                            <img class="img-responsive loading"
+                                                 src="~/images/icon-header-svg/loading.svg" />
+                                        </span>
+                                        <div class="status">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="seperate"></div>
+                                <div class="job-new">
+                                    <p>Việc làm mới 24h gần nhất</p>
+                                    <div class="box-quantity">
+                                        <span class="quantity" name="quantity_job_new_today">
+                                            <img class="img-responsive loading"
+                                                 src="~/images/icon-header-svg/loading.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>*@
+            </div>
+            <img class="img-responsive img-robot" src="~/images/icon-header-svg/robot.png" alt="">
+            <img class="img-responsive img-bg-left" src="~/images/icon-header-svg/bg-left.png" alt="">
+            <img class="img-responsive img-bg-right" src="~/images/icon-header-svg/bg-right.png" alt="">
+            <img class="img-responsive img-bg-left-tablet" src="~/images/icon-header-svg/bg-left-tablet.png"
+                 alt="">
+            <img class="img-responsive img-bg-right-tablet"
+                 src="~/images/icon-header-svg/bg-right-tablet.png" alt="">
+        </div>
+        <!-- Job -->
+        <section id="list-feature-jobs">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <input id="isLogin" value="true" hidden />
+
+            } else
+            {
+                <input id="isLogin" value="false" hidden />
+            }
+            <div class="container" >
+                <section class="box_general" id="box-feature-jobs">
+                    <div class="box-header">
+                        <div class="box-header__title">
+                            <h2 class="text_ellipsis uppercase box-title">
+                                Tin tuyển dụng, việc làm tốt nhất
+                            </h2>
+                        </div>
+                        <div class="box-header__tool">
+                            
+                        </div>
+                    </div>
+                    <div class="box-filter" style="display: none">
+                        <div class="input">
+                            <div class="input-group" id="filter-feature-job-container">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-bars-filter"></i>
+                                        Lọc theo:
+                                    </span>
+                                </div>
+                                <select id="filter-feature-job" class="form-control js-option-filter">
+                                    <option value="City">Địa điểm</option>
+                                    <option value="Salary">Mức lương</option>
+                                    <option value="Experience">Kinh nghiệm</option>
+                                    <option value="Industry">Ngành nghề</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box-smart-filter box-smart-feature-jobs">
+                            <div class="box-smart-location" id="City" hidden>
+                                <div class="box-smart-list-location row">
+                                    <style>
+                                        .hi {
+                                            display: flex;
+                                            justify-items: center;
+                                            align-items: center;
+                                            gap: 1rem;
+                                        }
+                                    </style>
+                                    <div class="col-md-6 col-sm-12 row hi">
+                                        
+                                        <div class="col-md-4 col-sm-12 ">
+                                            <label class="control-label mb-2">Tỉnh / Thành phố<span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <select id="cities" class="form-control">
+                                                <option value=''>-- Chọn tỉnh/thành phố --</option>
+                                                 @foreach (var data in ViewBag.City)
+                                                {
+                                                <option value="@data.name">@data.name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 row hi">
+                                        <div class="col-md-4 col-sm-12">
+                                            <label class="control-label mb-2">Quận / Huyện<span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <select id="districts" class="form-control col-md-6 col-md-12">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                let filterCities = document.getElementById("cities");
+                                filterCities.addEventListener("change", function (e) {
+                                    var selectedCityCode = this.value;
+                                    var districtsSelect = document.getElementById("districts");
+
+                                    // Clear the previous options
+                                    districtsSelect.innerHTML = "<option value=''>-- Chọn quận/huyện --</option>";
+
+                                    // Find the selected city data from the Model
+                                    var selectedCityData = @Html.Raw(Json.Serialize(ViewBag.City)) // Pass the Model as JSON to the JavaScript
+
+                                        selectedCityData.forEach(function (cityData) {
+                                            if (cityData.name == selectedCityCode) {
+                                                // Populate the "districts" select with the districts of the selected city
+                                                cityData.districts.forEach(function (district) {
+                                                    var option = document.createElement("option");
+                                                    option.value = district.name;
+                                                    option.text = district.name;
+                                                    districtsSelect.appendChild(option);
+                                                });
+                                            }
+                                        });
+                                });
+                            </script>
+                            <div class="row" id="Salary" hidden>
+                                <div class="col-md-6 col-sm-12">
+                                    <select id="salaries" class="form-control col-md-6 col-md-12">
+                                        <option value="">Tất cả</option>
+                                        <option value="0-3">Dưới 3 triệu</option>
+                                        <option value="3-10">Từ 3-10 triệu</option>
+                                        <option value="10-20">Từ 10-20 triệu</option>
+                                        <option value="20-30">Từ 20-30 triệu</option>
+                                        <option value="30-1000">Trên 30 triệu</option>
+                                        @*<option value="tt">Thỏa thuận</option>*@
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row" id="Experience" hidden>
+                                <div class="col-md-6 col-sm-12">
+                                    <select id="experiences" class="form-control col-md-6 col-md-12">
+                                        <option value="">Tất cả</option>
+                                        <option value="0-0">Chưa có kinh nghiệm</option>
+                                        <option value="0-1">1 năm trở xuống</option>
+                                        <option value="1-2">2 năm</option>
+                                        <option value="2-3">3 năm</option>
+                                        <option value="3-5">Từ 4 - 5 năm</option>
+                                        <option value="5-99">Trên 5 năm</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row" id="Industry" hidden>
+                                <div class="col-md-6 col-sm-12">
+                                    <select id="industryes" asp-items="ViewBag.IndustryId" class="form-control col-md-6 col-md-12">
+                                        <option value="">Tất cả</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loadingg" 
+                        style="min-height: 735px; margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr);">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                        <img src="~/images/icon-header-svg/job-box.svg" class="img-responsive" width="340px" height="108px">
+                    </div>
+
+                    <section>
+                        <div id="carousel-job" class="carousel slide" data-ride="carousel" data-interval="20000">
+                            <!-- Indicators -->
+                            @*<ol class="carousel-indicators">
+                                <li data-target="#carousel-job" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-job" data-slide-to="1"></li>
+                                <li data-target="#carousel-job" data-slide-to="2"></li>
+                            </ol>*@
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox" id="list-job">
+                                
+                            </div>
+                            <div class="feature-job-page" id="feature-job-page">
+                                <div class="content">
+                                    <a class="" href="#carousel-job" role="button" data-slide="prev">
+                                        <span class="btn-feature-jobs-pre btn-slick-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                    </a>
+
+                                    <div class="feature-job-page__text">
+                                        <p class="slick-pagination" id="pagination-job">
+                                            
+                                        </p>
+                                    </div>
+                                    <a href="#carousel-job" role="button" data-slide="next">
+                                        <span class="btn-feature-jobs-next btn-slick-arrow">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+
+            </div>
+        </section>
+
+        <!-- Company top -->
+        <div class="top-company">
+            <div class="container">
+                <div class="top-company__header">
+                    <h3 class="top-company__title">Top Công ty hàng đầu</h3>
+                    <div class="top-company__navigation">
+                        <a class="btn btn-prev btn-navigation" class="" href="#carousel-company" role="button" data-slide="prev">
+                            <span class="btn-feature-jobs-pre btn-slick-arrow">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                        </a>
+                        <a class="btn btn-prev btn-navigation" href="#carousel-company" role="button" data-slide="next">
+                            <span class="btn-feature-jobs-next btn-slick-arrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row loading" id="loading-company" style="display: block;">
+                    <div class="col-md-3">
+                        <img src="~/images/icon-header-svg/top-company.svg"
+                             width="260px" alt="Loading Job Content" height="304px">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="~/images/icon-header-svg/top-company.svg"
+                             width="260px" alt="Loading Job Content" height="304px">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="~/images/icon-header-svg/top-company.svg"
+                             width="260px" alt="Loading Job Content" height="304px">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="~/images/icon-header-svg/top-company.svg"
+                             width="260px" alt="Loading Job Content" height="304px">
+                    </div>
+                </div>
+                <div id="carousel-company" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <div class="carousel-inner mt-20" role="listbox" id="list-company">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Industry -->
+        <div class="top-category" style="margin-top: 60px;">
+            <div class="container">
+                <div class="top-category__header">
+                    <div class="top-category__box-title">
+                        <h3 class="top-category__title">
+                            Top ngành nghề nổi bật
+                        </h3>
+                    </div>
+                    <div class="top-category__navigation">
+                        <a class="btn btn-prev btn-navigation" href="#carousel-industry" role="button" data-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                        <a class="btn btn-prev btn-navigation" href="#carousel-industry" role="button" data-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-category__body">
+                    <div id="carousel-industry" class="carousel slide" data-ride="carousel" data-interval="20000">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="col-md-3">
+                                    <div class="top-category--item">
+                                        <div class="top-category__image">
+                                            <a href="#"
+                                               target="_blank">
+                                                <img width="100px"
+                                                     src="~/images/industry/cong-nghe-thong-tin.webp"
+                                                     alt="Quản lý chất lượng (QA/QC)">
+                                            </a>
+                                        </div>
+                                        <h4 class="top-category__name">
+                                            <a href="#"
+                                               title="Quản lý chất lượng (QA/QC)" target="_blank">
+                                                Quản lý chất lượng (QA/QC)
+                                            </a>
+                                        </h4>
+                                        <p class="top-category__caption">714 việc làm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="~/js/savejob.js" asp-append-version="true"></script>
+<script src="~/js/job.js" asp-append-version="true"/>

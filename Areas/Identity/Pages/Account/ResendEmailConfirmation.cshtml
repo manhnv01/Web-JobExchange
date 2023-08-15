@@ -1,0 +1,48 @@
+﻿@page "/ResendEmailConfirmation"
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+
+<div class="wrap-auth-section">
+    <div class="auth row">
+        <div class="auth-form">
+            <div class="header">
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo/Logo_ABCG07_OK.png">
+                    </a>
+                </div>
+                <h2 class="title">Gửi lại Email xác minh tài khoản</h2>
+                <div class="text-muted caption">
+                    Nhập Email của bạn để nhận xác minh
+                </div>
+            </div>
+            <div class="login">
+                <form id="account" method="post">
+                    <div asp-validation-summary="All" style="color: #0db14b" role="alert"></div>
+                    <div class="form-group mb-24 ">
+                        <label asp-for="Input.Email" class="form-label"></label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            </div>
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                        </div>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class=" form-group mt-3">
+                        <button id="login-submit" type="submit" class="btn btn-sign input-block-level w-100 h-40 mb-24  btn-primary-hover g-recaptcha">
+                            Gửi lại
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

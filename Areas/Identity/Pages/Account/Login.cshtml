@@ -1,0 +1,113 @@
+﻿@page "/Login"
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+<div class="wrap-auth-section">
+    <div class="auth row">
+        <div class="auth-form">
+            <div class="header">
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo/Logo_ABCG07_OK.png">
+                    </a>
+                </div>
+                <h2 class="title">Chào mừng bạn đã quay trở lại</h2>
+                <div class="text-muted caption">
+                    Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý
+                    tưởng
+                </div>
+            </div>
+            <div class="login">
+                <form id="account" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-24 ">
+                        <label asp-for="Input.Email" class="mb-1">Email</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Email" asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true">
+                        </div>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-20 ">
+                        <label asp-for="Input.Password" class="mb-1">Password</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-shield-keyhole"></i></span>
+                            </div>
+                            <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true"
+                                   placeholder="Mật khẩu">
+                            <div class="input-group-prepend">
+                                <button type="button" tabindex="-1" onclick="showPass()"
+                                        class="input-group-text toggle-password"></button>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <script>
+                        function showPass (){
+                            const passwordField = document.getElementById("Input_Password");
+                            if (passwordField.type === "password") {
+                                passwordField.type = "text";
+                            } else {
+                                passwordField.type = "password";
+                            }
+                        }
+                    </script>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="checkbox">
+                                <label asp-for="Input.RememberMe" class="form-label">
+                                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-24  wrap-forgot-password">
+                                <a id="forgot-password" asp-page="./ForgotPassword">Quên mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" form-group mt-3">
+                        <button id="login-submit" type="submit" class="btn btn-sign input-block-level w-100 h-40 mb-24  btn-primary-hover g-recaptcha">
+                            Đăng nhập
+                        </button>
+                    </div>
+                    <div class="title">
+                        <p>
+                            <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" style="color: #0db14b">Gửi lại Email xác minh</a>
+                        </p>
+                    </div>
+                </form>
+                <div class="mt-3 d-flex justify-content-around option-auth">
+                    <div>
+                        <span>Bạn chưa có tài khoản?</span>
+                        <a class="text-success" id="register" asp-area="Identity" asp-page="/Account/Register">
+                            Đăng ký ngay
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-3 d-flex justify-content-around option-auth">
+                    <div>
+                        @*<span>Bạn chưa có tài khoản?</span>
+                        <a class="text-success" id="register" asp-area="Identity" asp-page="/Account/Register">
+                            Đăng ký ngay
+                        </a>*@
+                        <a class="btn btn-dark" asp-area="Identity" asp-page="/Account/RegisterCompany" style="color: white !important;">
+                            Đăng ký tài khoản nhà tuyển dụng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="auth-copy-right">© 2023-2023 Job Exchange ABCG07.</p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

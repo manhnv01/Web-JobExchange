@@ -1,0 +1,166 @@
+﻿@using JobExchange.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<JobExchangeUser> SignInManager
+@inject UserManager<JobExchangeUser> UserManager
+@inject JobExchangeContext context
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>@ViewData["Title"] - JobExchange</title>
+
+	<link rel="stylesheet" href="~/css/company.min.b8f0b44f77db74bf.css">
+	<link rel="stylesheet" href="~/css/company.detail.min.788394eb39bb5e15.css">
+
+	<link href="~/css/app.css" rel="stylesheet">
+	<link href="~/css/all.min.css" rel="stylesheet">
+	<link class="js-stylesheet" href="~/css/light.css" rel="stylesheet">
+	<link rel="stylesheet" href="~//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+</head>
+
+<body>
+	<div class="wrapper">
+
+		@*sidebar*@
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="index.html">
+					<span class="align-middle">JobExchange ABCG07</span>
+                </a>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    var Account = await UserManager.GetUserAsync(User) as JobExchangeUser;
+                    <ul class="sidebar-nav">
+                        @if (@User.IsInRole("ROLE_ADMIN"))
+                        {
+                            <li class="sidebar-header">
+                                Quản trị viên
+                            </li>
+
+                            @*<li class="sidebar-item active">
+                                <a class="sidebar-link" href="#">
+                                    <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Bảng điều khiển</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="pages-profile.html">
+                                    <i class="align-middle" data-feather="users"></i> <span class="align-middle">Người dùng</span>
+                                </a>
+                            </li>*@
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" asp-controller="Industry" asp-action="Index">
+                                    <i class="align-middle" data-feather="tag"></i> <span class="align-middle">Ngành nghề</span>
+                                </a>
+                            </li>
+                        }
+                        else if (@User.IsInRole("ROLE_COMPANY"))
+                        {
+                            <li class="sidebar-header">
+                                Nhà tuyển dụng
+                            </li>
+
+                            @*<li class="sidebar-item">
+                                <a class="sidebar-link" href="#">
+                                    <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Bảng điều khiển</span>
+                                </a>
+                            </li>*@
+
+							<li class="sidebar-item">
+								<a class="sidebar-link" asp-controller="Company" asp-action="Profile">
+									<i class="align-middle" data-feather="user"></i> <span class="align-middle">Trang cá nhân</span>
+								</a>
+							</li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" asp-controller="Recruitment" asp-action="Index">
+                                    <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">Tin tuyển dụng</span>
+                                </a>
+                            </li>
+
+                        }
+
+                    </ul>
+				}
+				
+			</div>
+		</nav>
+
+		<div class="main">
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                var Account = await UserManager.GetUserAsync(User) as JobExchangeUser;
+                var company = context.Companies.FirstOrDefault(c => c.CompanyId == UserManager.GetUserId(User));
+                @*header*@
+                <nav class="navbar navbar-expand navbar-light navbar-bg">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                        <i class="hamburger align-self-center"></i>
+                    </a>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                    <i class="align-middle" data-feather="settings"></i>
+                                </a>
+                                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                    @if (@User.IsInRole("ROLE_COMPANY"))
+                                    {
+                                        <img src="~/images/companies/@company?.Avatar" alt="Avatar" class="avatar img-fluid rounded me-1" id="avatar-company" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/images/avatar-default.jpg" alt="Avatar" class="avatar img-fluid rounded me-1" id="avatar-company" />
+                                    }
+                                    <span class="text-dark">@Account?.AccountName</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    @if (@User.IsInRole("ROLE_COMPANY"))
+                                    {
+                                        <a class="dropdown-item" asp-controller="Company" asp-action="Profile"><i class="align-middle me-1" data-feather="user"></i> Trang cá nhân</a>
+                                        <div class="dropdown-divider"></div>
+                                    }
+                                    <a class="dropdown-item" href="javascript:void(0)" id="logout" onclick="document.getElementById('logoutForm').submit()" style="text-align: center;">Đăng xuất</a>
+                                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Job", new { area = "" })" method="POST">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            }
+
+			<main class="content">
+				<partial name="_Notification" />
+				@RenderBody()
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-12 text-center">
+							<p class="mb-0">
+								<a class="text-muted" href="#" target="_blank"><strong>© 2023-2023 Job Exchange ABCG07.</strong></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/js/app.js"></script>
+	<script src="~/js/datatables.js"></script>
+	<script src="~/js/toastr.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,985 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\JobExchange.bundle.scp.css",
+      "PackagePath": "staticwebassets\\JobExchange.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\app.min.99dbaee6ec838d8e.css",
+      "PackagePath": "staticwebassets\\css\\app.min.99dbaee6ec838d8e.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\batch-apply.fa180512a5a7937c.css",
+      "PackagePath": "staticwebassets\\css\\batch-apply.fa180512a5a7937c.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\company.detail.min.788394eb39bb5e15.css",
+      "PackagePath": "staticwebassets\\css\\company.detail.min.788394eb39bb5e15.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\company.min.b8f0b44f77db74bf.css",
+      "PackagePath": "staticwebassets\\css\\company.min.b8f0b44f77db74bf.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\company.search.min.14a696de0066acad.css",
+      "PackagePath": "staticwebassets\\css\\company.search.min.14a696de0066acad.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\component_login.css",
+      "PackagePath": "staticwebassets\\css\\component_login.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\fonts.googleapis.com_css_family_Roboto.css",
+      "PackagePath": "staticwebassets\\css\\fonts.googleapis.com_css_family_Roboto.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\footer-desktop.min.c66148e4f814e85c.css",
+      "PackagePath": "staticwebassets\\css\\footer-desktop.min.c66148e4f814e85c.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\hot-companies.min.95148e937b41ca2f.css",
+      "PackagePath": "staticwebassets\\css\\hot-companies.min.95148e937b41ca2f.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\index.min.9bda2482a644ab4e.css",
+      "PackagePath": "staticwebassets\\css\\index.min.9bda2482a644ab4e.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\job-detail.min.ee5985fc2d150317.css",
+      "PackagePath": "staticwebassets\\css\\job-detail.min.ee5985fc2d150317.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\job-exchang_login.css",
+      "PackagePath": "staticwebassets\\css\\job-exchang_login.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\job-list-default.54c1c7011c100262.css",
+      "PackagePath": "staticwebassets\\css\\job-list-default.54c1c7011c100262.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\light.css",
+      "PackagePath": "staticwebassets\\css\\light.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\navbar_bs.48a14966e2c4f3ce.css",
+      "PackagePath": "staticwebassets\\css\\navbar_bs.48a14966e2c4f3ce.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\profile.min.css",
+      "PackagePath": "staticwebassets\\css\\profile.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\support-ticket.366d2944250542b2.css",
+      "PackagePath": "staticwebassets\\css\\support-ticket.366d2944250542b2.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\css\\toastr.css",
+      "PackagePath": "staticwebassets\\css\\toastr.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\data.json",
+      "PackagePath": "staticwebassets\\data.json"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\403accessdenied.png",
+      "PackagePath": "staticwebassets\\images\\403accessdenied.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\AccessDenied.png",
+      "PackagePath": "staticwebassets\\images\\AccessDenied.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\avatar-default.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar-default.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\avatar\\6fe430a9-9c17-4d93-9847-5b00ec10a135.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\6fe430a9-9c17-4d93-9847-5b00ec10a135.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\avatar\\761a9093-1bd4-46fc-8ec1-0d2199723071.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\761a9093-1bd4-46fc-8ec1-0d2199723071.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\avatar\\avatar-default.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\avatar-default.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\camera.jpg",
+      "PackagePath": "staticwebassets\\images\\camera.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\1MUyAGzBFqi6PQ9mM0S3.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\1MUyAGzBFqi6PQ9mM0S3.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\25b43c29-4814-48dc-9954-e4ccfb3a4507.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\25b43c29-4814-48dc-9954-e4ccfb3a4507.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\26a472cc-d08b-4f0d-921c-0530cc2cc9e3.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\26a472cc-d08b-4f0d-921c-0530cc2cc9e3.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\3bf55109-7e5d-4bc2-9f94-8a935a09df16.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\3bf55109-7e5d-4bc2-9f94-8a935a09df16.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\48890e98-c34d-430a-97f4-6a243962d158.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\48890e98-c34d-430a-97f4-6a243962d158.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\520e74f8-a7e3-4203-b357-31f93cc081f4.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\520e74f8-a7e3-4203-b357-31f93cc081f4.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\73258307-c2f0-4a88-b60f-bd617c6e40f8.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\73258307-c2f0-4a88-b60f-bd617c6e40f8.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\UuImnZBQUYo2zrsSqmS1.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\UuImnZBQUYo2zrsSqmS1.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\af0ad3ff-e458-4d02-b988-c9a85fff3451.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\af0ad3ff-e458-4d02-b988-c9a85fff3451.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\avatar-default.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\avatar-default.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\b14b1834-6998-472b-821e-38f50d459b95.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\b14b1834-6998-472b-821e-38f50d459b95.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cong-ty-phat-trien-phan-mem-xay-dung-aureole-5ef559f0a19ea.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cong-ty-phat-trien-phan-mem-xay-dung-aureole-5ef559f0a19ea.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638256617798446474.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638256617798446474.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638256634690202021.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638256634690202021.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638256958162700223.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638256958162700223.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258340148538692.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258340148538692.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258345948390869.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258345948390869.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258346538407155.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258346538407155.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258347198786238.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258347198786238.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258347772359791.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258347772359791.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258348688117447.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258348688117447.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258349500730644.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258349500730644.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258350692837463.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258350692837463.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\cover-638258351699937139.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\cover-638258351699937139.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\daf6f2f2-edd6-40e9-a253-8ae2a115d00c.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\daf6f2f2-edd6-40e9-a253-8ae2a115d00c.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\dai-hoc-fpt-5e6cd019948cb.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\dai-hoc-fpt-5e6cd019948cb.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\e2402592-2e01-4ace-8f47-6a564a6c6ea3.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\e2402592-2e01-4ace-8f47-6a564a6c6ea3.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\lUyQdNAmxJZv1BohmAOa.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\lUyQdNAmxJZv1BohmAOa.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\mUyofsckMXP3yzizOUHPwHfY8D59Yttp_1687234000____832d24e7c60703094b8d0922161d91a7.png",
+      "PackagePath": "staticwebassets\\images\\companies\\mUyofsckMXP3yzizOUHPwHfY8D59Yttp_1687234000____832d24e7c60703094b8d0922161d91a7.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\mUyofsckMXP3yzizOUHPwHfY8D59Yttp_1687234000____832d24e7c60703094b8d0922161d91a7.webp",
+      "PackagePath": "staticwebassets\\images\\companies\\mUyofsckMXP3yzizOUHPwHfY8D59Yttp_1687234000____832d24e7c60703094b8d0922161d91a7.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\ngan-hang-bao-viet-5937b34d972ad_rs.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\ngan-hang-bao-viet-5937b34d972ad_rs.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\ngan-hang-thuong-mai-co-phan-ky-thuong-viet-nam-5cd6348b681a5844910fad42207a58b1-632bbebd378e8.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\ngan-hang-thuong-mai-co-phan-ky-thuong-viet-nam-5cd6348b681a5844910fad42207a58b1-632bbebd378e8.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\ngan-hang-thuong-mai-co-phan-ky-thuong-viet-nam-632bbf5a763f7.png",
+      "PackagePath": "staticwebassets\\images\\companies\\ngan-hang-thuong-mai-co-phan-ky-thuong-viet-nam-632bbf5a763f7.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\profile_default_cover.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\profile_default_cover.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\companies\\vuihocvn-5ab6b290a80059d251b10ca2b2fc63b7-648c12f2f29d4.jpg",
+      "PackagePath": "staticwebassets\\images\\companies\\vuihocvn-5ab6b290a80059d251b10ca2b2fc63b7-648c12f2f29d4.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\11.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\11.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\12.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\12.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\13.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\13.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\14.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\14.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\15.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\15.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\16.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\16.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\17.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\17.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\18.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\18.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\3dcube.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\3dcube.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\bg-left-tablet.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\bg-left-tablet.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\bg-left.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\bg-left.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\bg-right-tablet.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\bg-right-tablet.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\bg-right.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\bg-right.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\briefcase.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\briefcase.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\brifecase-timer.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\brifecase-timer.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\dollar-icon.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\dollar-icon.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\favorite-chart.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\favorite-chart.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\folder-open.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\folder-open.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\job-box.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\job-box.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading-banner.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading-banner.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading-banner.svg.readme",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading-banner.svg.readme"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading-chart.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading-chart.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading-chart.svg.readme",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading-chart.svg.readme"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\loading.svg.readme",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\loading.svg.readme"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\location-icon.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\location-icon.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\robot.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\robot.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\search-icon.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\search-icon.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\top-company.svg",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\top-company.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\icon-header-svg\\toppy-hr-teche209.png",
+      "PackagePath": "staticwebassets\\images\\icon-header-svg\\toppy-hr-teche209.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\275282785_699582581045207_3076094229994779284_n.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\275282785_699582581045207_3076094229994779284_n.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\cong-nghe-thong-tin.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\cong-nghe-thong-tin.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\giao-duc-dao-tao.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\giao-duc-dao-tao.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\hanh-chinh-van-phong.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\hanh-chinh-van-phong.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\hinh-nen-phong-canh-anime.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\hinh-nen-phong-canh-anime.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\img28.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\img28.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\img34.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\img34.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\img35.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\img35.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\kinh-doanh-ban-hang.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\kinh-doanh-ban-hang.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\marketing-truyen-thong-quang-cao.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\marketing-truyen-thong-quang-cao.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\thiet-ke-do-hoa.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\thiet-ke-do-hoa.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\thoi-trang.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\thoi-trang.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\tu-van.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\tu-van.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\van-tai-kho-van.webp",
+      "PackagePath": "staticwebassets\\images\\industry\\van-tai-kho-van.webp"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\industry\\windows_xp_original-wallpaper-1920x1080.jpg",
+      "PackagePath": "staticwebassets\\images\\industry\\windows_xp_original-wallpaper-1920x1080.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\job-detail-tab-bar.png",
+      "PackagePath": "staticwebassets\\images\\job-detail-tab-bar.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\logo\\Logo_ABCG07_OK.png",
+      "PackagePath": "staticwebassets\\images\\logo\\Logo_ABCG07_OK.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\icon-education.svg",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\icon-education.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\icon-exp.svg",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\icon-exp.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\icon-skills.svg",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\icon-skills.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-certificate.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-certificate.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-education.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-education.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-experience.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-experience.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-prize.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-prize.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-project.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-project.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile-icon-svg\\profile-skills.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-svg\\profile-skills.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\profile_default_cover.jpg",
+      "PackagePath": "staticwebassets\\images\\profile_default_cover.jpg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\images\\qrABCG07.png",
+      "PackagePath": "staticwebassets\\images\\qrABCG07.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\Candidate\\experience.js",
+      "PackagePath": "staticwebassets\\js\\Candidate\\experience.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\account.js",
+      "PackagePath": "staticwebassets\\js\\account.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\candidate.js",
+      "PackagePath": "staticwebassets\\js\\candidate.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\company.js",
+      "PackagePath": "staticwebassets\\js\\company.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\datatables.js",
+      "PackagePath": "staticwebassets\\js\\datatables.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\industry.js",
+      "PackagePath": "staticwebassets\\js\\industry.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\job.js",
+      "PackagePath": "staticwebassets\\js\\job.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\recruitment.js",
+      "PackagePath": "staticwebassets\\js\\recruitment.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\savejob.js",
+      "PackagePath": "staticwebassets\\js\\savejob.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\settings.js",
+      "PackagePath": "staticwebassets\\js\\settings.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\js\\toastr.js",
+      "PackagePath": "staticwebassets\\js\\toastr.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\OwlCarousel2\\2.3.4\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\2.3.4\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\OwlCarousel2\\2.3.4\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\2.3.4\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\OwlCarousel2\\2.3.4\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\OwlCarousel2\\2.3.4\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min3f71.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min3f71.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min3f71.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min3f71.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\icon\\icon-verified-employer.min.b79f9d8bd7063f2f.css",
+      "PackagePath": "staticwebassets\\lib\\icon\\icon-verified-employer.min.b79f9d8bd7063f2f.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\jquery.pnotify.default.css",
+      "PackagePath": "staticwebassets\\lib\\notify\\jquery.pnotify.default.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\jquery.pnotify.default.icons.css",
+      "PackagePath": "staticwebassets\\lib\\notify\\jquery.pnotify.default.icons.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\jquery.pnotify.min.js",
+      "PackagePath": "staticwebassets\\lib\\notify\\jquery.pnotify.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\pnotify.custom.min.css",
+      "PackagePath": "staticwebassets\\lib\\notify\\pnotify.custom.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\pnotify.custom.min.js",
+      "PackagePath": "staticwebassets\\lib\\notify\\pnotify.custom.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\notify\\use for pines style icons\\jquery.pnotify.default.icons.css",
+      "PackagePath": "staticwebassets\\lib\\notify\\use for pines style icons\\jquery.pnotify.default.icons.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\lib\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\select2\\js\\i18n\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\i18n\\vi.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\select2\\js\\select2.dropdown-position.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.dropdown-position.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\lib\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-duotone-900.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-duotone-900.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-duotone-900.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-light-300.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-light-300.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-light-300.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\ChuyenNganhSE\\WebNangCao\\BTL\\job-exchange\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.JobExchange.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.JobExchange.props",
+      "PackagePath": "build\\JobExchange.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.JobExchange.props",
+      "PackagePath": "buildMultiTargeting\\JobExchange.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.JobExchange.props",
+      "PackagePath": "buildTransitive\\JobExchange.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,365 @@
+.d-flex {
+    display: flex !important
+}
+
+.box-search-company {
+    padding-top: 32px
+}
+
+.box-search-company .box-search {
+    width: 65%
+}
+
+.box-search-company h1 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 24px
+}
+
+.box-search-company h1 span {
+    color: #00b14f
+}
+
+.box-search-company .form-search {
+    background: #fff;
+    border: 1px solid #fafafa;
+    border-radius: 25px;
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
+    display: flex;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 70%
+}
+
+.box-search-company .form-search i {
+    color: #999;
+    font-weight: 700;
+    left: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.box-search-company .form-search #keyword {
+    border-color: transparent;
+    box-shadow: none;
+    font-size: 14px;
+    height: 100%;
+    outline: none;
+    padding-left: 50px;
+    padding-right: 130px;
+    width: 100%
+}
+
+.box-search-company .form-search .btn-search {
+    background: #00b14f;
+    border: 1px solid #fafafa;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    padding: 7px 26px;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.box-search-company .box-img {
+    margin-left: 250px
+}
+
+.box-result-search-companies {
+    background-color: #f0f0f0;
+    padding-bottom: 40px;
+    padding-top: 16px
+}
+
+.box-result-search-companies .box-white {
+    background: #fff
+}
+
+.box-result-search-companies .box-result {
+    border-radius: 8px;
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
+    padding: 24px
+}
+
+.box-result-search-companies .box-result .count {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 17px
+}
+
+.box-result-search-companies .box-result .count span {
+    color: #00b14f;
+    font-weight: 700
+}
+
+.box-result-search-companies .box-result .not-count {
+    margin-bottom: 0
+}
+
+.box-result-search-companies .box-result .result-search-company {
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 16px
+}
+
+.box-result-search-companies .box-result .result-search-company img {
+    background: #fff;
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    filter: drop-shadow(-1px 1px 6px rgba(0, 0, 0, .05));
+    height: 80px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 80px
+}
+
+.box-result-search-companies .box-result .result-search-company .logo {
+    float: left
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info {
+    margin-left: 97px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .title {
+    margin-bottom: 10px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .title .company-name {
+    color: #333;
+    font-size: 15px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .title .circle {
+    color: #999;
+    font-size: 4px;
+    margin: 0 8px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .title .countJob {
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .title .countJob i {
+    left: 0;
+    position: absolute;
+    top: 45%
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-address {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-address span {
+    color: 15px;
+    font-size: 15px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-address i {
+    color: gray;
+    font-size: 15px;
+    margin-right: 15px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-intro {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 10px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-intro span {
+    color: 15px;
+    font-size: 15px
+}
+
+.box-result-search-companies .box-result .result-search-company .result-search-company-info .company-intro i {
+    color: gray;
+    font-size: 15px;
+    margin-right: 15px
+}
+
+.box-result-search-companies .box-featured-companie {
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
+    padding: 16px
+}
+
+.box-result-search-companies .box-featured-companie h4 {
+    color: #212f3f;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-top: 0
+}
+
+.box-result-search-companies .box-featured-companie .box-featured-company-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.box-result-search-companies .box-featured-companie .box-featured-company-img .featured-company-img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
+    width: 50%
+}
+
+.box-result-search-companies .box-featured-companie .box-featured-company-img .featured-company-img img {
+    height: 60px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    transition: all .3s;
+    width: 60px
+}
+
+.box-result-search-companies .box-featured-companie .box-featured-company-img .featured-company-img:hover img {
+    transform: scale(1.2)
+}
+
+.box-result-search-companies .box-featured-companie .box-featured-company-img .box-img {
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    overflow: hidden;
+    width: 90px
+}
+
+.pagination {
+    margin-top: 20px
+}
+
+.pagination,
+.pagination li {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.pagination li {
+    border-radius: 3px;
+    height: 32px;
+    margin: 0 5px;
+    text-align: center;
+    width: 32px
+}
+
+.pagination li:first-child,
+.pagination li:last-child {
+    background: #eee 0 0 no-repeat padding-box
+}
+
+.pagination li:first-child a,
+.pagination li:first-child span,
+.pagination li:last-child a,
+.pagination li:last-child span {
+    font-size: 30px;
+    font-weight: 100
+}
+
+.pagination li:first-child a:hover,
+.pagination li:first-child span:hover,
+.pagination li:last-child a:hover,
+.pagination li:last-child span:hover {
+    background: 0 0;
+    width: inherit
+}
+
+.pagination li a {
+    align-items: center;
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    height: 100%;
+    justify-content: center;
+    text-decoration: none
+}
+
+.pagination li.active {
+    background: #00b14f 0 0 no-repeat padding-box;
+    color: #fff
+}
+
+.pagination li.active span {
+    background-color: #00b14f;
+    color: #fff
+}
+
+.pagination li.active span:hover {
+    background: 0 0
+}
+
+.pagination li:first-child {
+    position: relative
+}
+
+.pagination li:first-child a,
+.pagination li:first-child span[aria-hidden=true] {
+    opacity: 0;
+    position: absolute
+}
+
+.pagination li:first-child:after {
+    color: #333;
+    content: "\f053";
+    display: block;
+    font-family: Font Awesome\ 6 Pro;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: left
+}
+
+.pagination li:last-child {
+    position: relative
+}
+
+.pagination li:last-child a,
+.pagination li:last-child>span[aria-hidden=true] {
+    opacity: 0;
+    position: absolute
+}
+
+.pagination li:last-child:after {
+    color: #333;
+    content: "\f054";
+    display: block;
+    font-family: Font Awesome\ 6 Pro;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: left
+}
+
+.pagination>li a,
+.pagination>li>span {
+    background-color: initial;
+    border: none;
+    border-radius: 3px;
+    color: initial;
+    padding: inherit;
+    position: relative;
+    text-decoration: none
+}
+
+.pagination>li a:hover,
+.pagination>li>span:hover {
+    background: #dbdbdb;
+    width: 100%
+}

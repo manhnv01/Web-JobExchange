@@ -1,0 +1,340 @@
+@model CompanyViewModel
+@using JobExchange.Helper;
+@{
+    ViewData["Title"] = "Detail Company Page";
+}
+<div id="main">
+    <div id="breadcrumb" class="breadcrumb">
+        <div class="container">
+            <ul class="nav d-flex">
+                <li class="nav-item">
+                    <a class="text-highlight bold" asp-controller="Company" asp-action="Index">Danh sách Công ty</a>
+                </li>
+                <li class="nav-item">Thông tin công ty &amp; tin tuyển dụng từ @Model.Company.CompanyName</li>
+            </ul>
+        </div>
+    </div>
+    <div class="company-cover">
+        <div class="container">
+            <div class="company-cover-inner">
+                <div class="cover-wrapper">
+                    <img draggable="false" src="~/images/companies/@Model.Company.CoverImage" alt="" class="img-responsive cover-img"
+                         width="100%">
+                </div>
+                <div class="company-logo">
+                    <div class="company-image-logo">
+                        <img draggable="false" src="~/images/companies/@Model.Company.Avatar" alt="@Model.Company.CompanyName"
+                             class="img-responsive">
+                    </div>
+                </div>
+                <div class="company-detail-overview">
+                    <div class="box-detail">
+                        <h1 data-toggle="tooltip" title="@Model.Company.CompanyName"
+                            class="company-detail-name text-highlight">
+                            @Model.Company.CompanyName
+                        </h1>
+                        <div class="company-subdetail">
+                            <div class="company-subdetail-info">
+                                <span class="company-subdetail-info-icon">
+                                    <i class="fa-solid fa-buildings"></i>
+                                </span>
+                                <span class="company-subdetail-info-text">@Model.Company.Scale nhân viên</span>
+                            </div>
+                            <div class="company-subdetail-info">
+                                <span class="company-subdetail-info-icon">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <span class="company-subdetail-info-text">@Model.Company.Scale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="unfollow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Bỏ theo dõi</h4>
+                    <button type="button" class="btn-close" data-dismiss="modal">
+                        <span><i class="fa-regular fa-xmark"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-text">
+                        Bỏ theo dõi sẽ không tiếp tục nhận được thông tin tuyển dụng từ <span>
+                            TỔ CHỨC GIÁO DỤC
+                            FPT
+                        </span>.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <form action="https://www.topcv.vn/cong-ty/bo-theo-doi" method="POST">
+                        <input type="hidden" name="company_id" value="68">
+                        <input type="hidden" name="_token" value="lX3f40HcHTTmYpHFF25xSJfNyxEBlrbepjtbeR3U">
+                        <button type="button" class="btn btn-sm btn-cancel" data-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-sm btn-unfollow" id="btn-remove-follow">
+                            Bỏ theo
+                            dõi
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="section-introduce">
+                        <div class="company-info">
+                            <h4 class="title">Giới thiệu công ty</h4>
+                            <div class="box-body">
+                                <div class="content">
+                                    <p>@Model.Company.Introduce</p>
+                                    <div class="temp"></div>
+                                </div>
+                                <a href="javascript:void(0)" class="load-more">
+                                    Xem thêm <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <a href="javascript:void(0)" class="show-less">
+                                    Thu gọn <i class="fa-solid fa-angle-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-listing box-white" id="box-job-listing">
+                        <div class="job-listing__header">
+                            <h4 class="title">Tuyển dụng</h4>
+                        </div>
+                        <div class="box-body">
+                            <div class="box-search">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5 21.75C5.85 21.75 1.25 17.15 1.25 11.5C1.25 5.85 5.85 1.25 11.5 1.25C17.15 1.25 21.75 5.85 21.75 11.5C21.75 17.15 17.15 21.75 11.5 21.75ZM11.5 2.75C6.67 2.75 2.75 6.68 2.75 11.5C2.75 16.32 6.67 20.25 11.5 20.25C16.33 20.25 20.25 16.32 20.25 11.5C20.25 6.68 16.33 2.75 11.5 2.75Z"
+                                                  fill="#6F7882" />
+                                            <path d="M22.0004 22.7504C21.8104 22.7504 21.6204 22.6804 21.4704 22.5304L19.4704 20.5304C19.1804 20.2404 19.1804 19.7604 19.4704 19.4704C19.7604 19.1804 20.2404 19.1804 20.5304 19.4704L22.5304 21.4704C22.8204 21.7604 22.8204 22.2404 22.5304 22.5304C22.3804 22.6804 22.1904 22.7504 22.0004 22.7504Z"
+                                                  fill="#6F7882" />
+                                        </svg>
+                                    </div>
+                                    <input type="text" class="form-control" id="job-listing-name"
+                                           placeholder="Tên công việc, vị trí ứng tuyển..." aria-label="Username"
+                                           aria-describedby="basic-addon1">
+                                </div>
+                                <button class="btn btn-search btn-search-job-company">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <span>
+                                        Tìm kiếm
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="loading-job" id="loading-box">
+                                <div class="loading-item">
+                                </div>
+                            </div>
+                            <div class="box-content" id="job-listing-content">
+                                <div class="job-list-default">
+                                    @foreach (var item in @Model.Recruitments)
+                                    {
+                                        <div class="job-item-default bg-highlight  job-ta" data-job-id="1063461" data-job-position="1" data-box="BoxRecruitmentInCompany">
+                                            <div class="avatar">
+                                                <a target="_blank" asp-controller="Job" asp-action="DefaultJob" asp-route-id="@item.RecruitmentId">
+                                                    <img src="~/images/companies/@item.Company.Avatar"
+                                                         class="w-100" alt="@item.Company.CompanyName"
+                                                         title="Chuyên Viên Hỗ Trợ Khách Hàng Doanh Nghiệp (Hà Nội, Hồ Chí Minh)">
+                                                </a>
+                                            </div>
+                                            <div class="body">
+                                                <div class="body-content">
+                                                    <div class="title-block">
+                                                        <div>
+                                                            <h3 class="title">
+                                                                <div class="box-label-top"></div>
+                                                                <a target="_blank" asp-controller="Job" asp-action="DefaultJob" asp-route-id="@item.RecruitmentId">
+                                                                    <span data-toggle="tooltip" data-container="body" data-placement="top" title=""
+                                                                          data-original-title="Chuyên Viên Hỗ Trợ Khách Hàng Doanh Nghiệp (Hà Nội, Hồ Chí Minh)"
+                                                                          aria-describedby="tooltip262346">
+                                                                        @item.RecruitmentTitle
+                                                                    </span>
+                                                                </a>
+                                                            </h3>
+                                                            <a class="company" asp-controller="Company" asp-action="Detail" asp-route-id="@item.Company.CompanyId"
+                                                               data-toggle="tooltip" title="" data-placement="top" target="_blank"
+                                                               data-original-title="@item.Company.CompanyName">@item.Company.CompanyName</a>
+                                                        </div>
+                                                        <label class="title-salary">
+                                                            <i class="fa-solid fa-circle-dollar"></i>
+                                                                @FormatHelper.FormatCurrency(item.Salary)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="label-content">
+                                                        <label class="address" data-toggle="tooltip" data-html="true" title="" data-placement="top"
+                                                               data-original-title="<p style='text-align: left'>Hà Nội<br/>Hồ Chí Minh</p>">- @item.City: @item.AddressDetail, @item.Ward, @item.District, @item.City</label>
+                                                        @{
+                                                            var days = FormatHelper.GetRemainingTime(item.ExpirationDate);
+                                                        }
+                                                        @if (days <=0)
+                                                        {
+                                                            <label class="label label-warning">Tin tuyển dụng hết hạn</label>
+                                                        }
+                                                        else
+                                                        {
+                                                            <label class="time">
+                                                                Còn
+                                                                <strong>@days</strong>
+                                                                ngày để ứng tuyển
+                                                            </label>
+                                                        }
+
+                                                        <label class="address" data-container="body">
+                                                            Số lượng tuyển: @item.HiringCount
+
+                                                        </label>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <button data-redirect-to="#"
+                                                                class="btn btn-apply-now">
+                                                            <span>Ứng tuyển</span>
+                                                        </button>
+                                                        <div class="box-save-job">
+                                                            <a data-id="1063461"
+                                                               href="javascript:showLoginPopup('https://www.topcv.vn/get-render-list-job-company/16716?city_id=0&amp;keyword=&amp;limit=6&amp;page=1&amp;slug=ngan-hang-thuong-mai-co-phan-ky-thuong-viet-nam', 'Đăng nhập hoặc Đăng ký để lưu tin tuyển dụng')"
+                                                               class="save box-save-job-hover" data-toggle="tooltip" title=""
+                                                               data-original-title="Bạn phải đăng nhập để lưu tin"><i class="fa-regular fa-heart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <link rel="stylesheet"
+                          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+                          referrerpolicy="no-referrer" />
+
+                    <div id="section-top-company-field">
+                        <h3 class="title">
+                            Top công ty cùng lĩnh vực
+                        </h3>
+                        <div class="box-result-search-companies" style="background-color: #f3f5f7;">
+                            <div class=" box-result" style="padding: 0px; box-shadow: none">
+
+                                @if (@Model.RelatedCompanies.Count() > 0)
+                                {
+                                    @foreach (var company in @Model.RelatedCompanies)
+                                    {
+                                        <div class="result-search-companies">
+                                            <div class="result-search-company" style="background: WHITE;">
+                                                <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId" class="logo">
+                                                    <img src="~/images/companies/@company.Avatar" alt="@company.CompanyName" title="@company.CompanyName"
+                                                         class="img-responsive">
+                                                </a>
+                                                <div class="result-search-company-info">
+                                                    <div class="title">
+                                                        <strong>
+                                                            <a class="company-name" asp-controller="Company" asp-action="Detail"
+                                                               asp-route-id="@company.CompanyId"
+                                                               target="_blank">@company.CompanyName</a>
+                                                        </strong>
+                                                        <span class="countJob">@*<i class="fa-solid fa-circle circle"></i> Đang tuyển @company.Recruitments.Count vị trí*@</span>
+                                                    </div>
+                                                    <div class="company-address d-flex">
+                                                        <i class="fa-solid fa-circle-location-arrow"></i> <span>
+                                                            <span style="color: #999999">
+                                                                Trụ
+                                                                sở chính:
+                                                            </span>@company.Address
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div style="clear: both"></div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>Không có công ty nào.</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4">
+                    <div id="section-contact">
+                        <h4 class="title">Thông tin liên hệ</h4>
+                        <div class="box-body">
+                            <div class="item">
+                                <div class="box-caption">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Địa chỉ công ty</span>
+                                </div>
+                                <div class="desc">
+                                    @Model.Company.Address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-sharing box-white">
+                        <h4 class="title bg-header">Chia sẻ công ty tới bạn bè</h4>
+                        <div class="box-body">
+                            <p>Chia sẻ qua mạng xã hội</p>
+                            <div class="box-share">
+                                <a href="#"
+                                   target="_blank">
+                                    <img src="https://www.topcv.vn/v4/image/normal-company/share/facebook.png"
+                                         alt="">
+                                </a>
+                                <a href="#"
+                                   target="_blank">
+                                    <img src="https://www.topcv.vn/v4/image/normal-company/share/twitter.png" alt="">
+                                </a>
+                                <a href="#"
+                                   target="_blank">
+                                    <img src="https://www.topcv.vn/v4/image/normal-company/share/linked.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('.btn-search-job-company').addEventListener('click', function () {
+                var companyId = '@Model.Company.CompanyId';
+                var name = document.getElementById('job-listing-name').value;
+
+                if (name === '') {
+                    alert("Please enter job");
+                    return false;
+                }
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/Company/Recruitments', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.querySelector('.job-list-default').innerHTML = '';
+                        document.querySelector('.job-list-default').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send('companyId=' + encodeURIComponent(companyId) + '&name=' + encodeURIComponent(name));
+            });
+        });
+    </script>
+}

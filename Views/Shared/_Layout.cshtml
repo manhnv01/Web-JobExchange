@@ -1,0 +1,341 @@
+﻿@using JobExchange.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity
+@using JobExchange.Models;
+@inject SignInManager<JobExchangeUser> SignInManager
+@inject UserManager<JobExchangeUser> UserManager
+@inject JobExchangeContext context
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JobExchange</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min3f71.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/JobExchange.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    @*<link rel="stylesheet" href="v2/bootstrap/css/bootstrap.min3f71.css?v=1.1.1">*@
+    <link rel="stylesheet" href="~//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link href="~/css/fonts.googleapis.com_css_family_Roboto.css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" as="style" href="~/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="~/css/app.min.99dbaee6ec838d8e.css">
+    <link rel="stylesheet" href="~/css/index.min.9bda2482a644ab4e.css">
+    <link rel="stylesheet" href="~/css/navbar_bs.48a14966e2c4f3ce.css">
+    <link rel="stylesheet" href="~/css/company.min.b8f0b44f77db74bf.css">
+    <link rel="stylesheet" href="~/css/company.detail.min.788394eb39bb5e15.css">
+    <link rel="stylesheet" href="~/css/company.search.min.14a696de0066acad.css">
+    <link rel="stylesheet" href="~/css/job-list-default.54c1c7011c100262.css">
+    <link rel="stylesheet" href="~/css/support-ticket.366d2944250542b2.css">
+    <link rel="stylesheet" href="~/lib/icon/icon-verified-employer.min.b79f9d8bd7063f2f.css">
+    <link rel="stylesheet" href="~/lib/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/hot-companies.min.95148e937b41ca2f.css">
+
+    
+
+    <style>
+        #toast-container>div {
+            opacity: unset;
+        }
+
+        [v-cloak] {
+            display: none !important;
+        }
+    </style>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min3f71.js?v=1.1.1"></script>
+
+
+    @*Notification*@
+    <script src="~/lib/notify/pnotify.custom.min.js"></script>
+    <link href="~/lib/notify/pnotify.custom.min.css" rel="stylesheet" />
+
+    <script src="~/lib/notify/jquery.pnotify.min.js"></script>
+    <link href="~/lib/notify/jquery.pnotify.default.css" rel="stylesheet" />
+    <link href="~/lib/notify/jquery.pnotify.default.icons.css" rel="stylesheet" />
+</head>
+<body>
+   @* <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>*@
+    <nav class="navbar ta-top">
+        <div class="container-fluid px-30">
+            <div class="navbar-header">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+                    <img src="~/images/logo/Logo_ABCG07_OK.png" alt=""
+                         title="" class="">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="navbar-left__item group active">
+                    <a>
+                        Việc làm
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <li class="navbar-menu__item  active  tag-border">
+                                <a asp-controller="Job" asp-action="Index" class="text-sm">
+                                    <i class="icon fa-regular fa-magnifying-glass"></i>
+                                    Tìm việc làm
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a asp-controller="Job" asp-action="CandidateHistory" class="text-sm">
+                                    <i class="icon fa-regular fa-check-to-slot"></i>
+                                    Việc làm đã ứng tuyển
+                                    
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a asp-controller="Job" asp-action="Saved" class="text-sm">
+                                    <i class="fa-regular fa-laptop-code icon"></i>
+                                    Việc làm đã lưu
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="navbar-left__item group">
+                    <a asp-controller="Company" asp-action="Index" title="Công ty">
+                        Công ty
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <li class="navbar-menu__item ">
+                                <a asp-controller="Company" asp-action="Index" class="text-sm">
+                                    <i class="icon fa-regular fa-buildings"></i>
+                                    Danh sách công ty
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a asp-controller="Company" asp-action="Top" class="text-sm">
+                                    <i class="icon fa-regular fa-stars"></i>
+                                    Top công ty
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    var Account = await UserManager.GetUserAsync(User) as JobExchangeUser;
+                    var candidate = context.Candidates.FirstOrDefault(c => c.CandidateId == UserManager.GetUserId(User));
+                    var company = context.Companies.FirstOrDefault(c => c.CompanyId == UserManager.GetUserId(User));
+                    var avatar = (!string.IsNullOrEmpty(candidate?.Avatar)) ? candidate?.Avatar : "avatar-default.jpg";
+                    var avatarCompany = (!string.IsNullOrEmpty(candidate?.Avatar)) ? company?.Avatar : "avatar-default.jpg";
+                    <li class="navbar-right__item group">
+                        <div class="title">
+                            <a href="javascript:void(0)">
+                                @if (@User.IsInRole("ROLE_CANDIDATE"))
+                                {
+                                    <img src="~/images/avatar/@avatar" alt="Avatar" id="avatar">
+                                    <span class="fullname">Hello @candidate.FullName !</span>
+                                }
+                                else if (@User.IsInRole("ROLE_COMPANY"))
+                                {
+                                    <img src="~/images/companies/@avatarCompany" alt="Avatar" id="avatar">
+                                    <span class="fullname">Hello @Account.AccountName !</span>
+                                }
+                                else
+                                {
+                                    <img src="~/images/avatar-default.jpg" alt="Avatar" id="avatar">
+                                    <span class="fullname">Hello @Account.AccountName !</span>
+                                    
+                                }
+                            </a>
+                        </div>
+                        <div class="group-hover:menu navbar__item__dropdown-menu">
+                            <ul class="nav navbar-menu">
+                                <li class="dropdown-menu__info  tag-border">
+                                    <img src="~/images/avatar/@avatar" alt="Avatar">
+                                    <div class="caption">
+                                        @*<p class="name">@Account?.AccountName</p>*@
+
+                                        @if (@User.IsInRole("ROLE_CANDIDATE"))
+                                        {
+                                            <p class="name" id="fullname">@candidate?.FullName</p>
+                                        }
+                                        else
+                                        {
+                                            <span class="fullname">Hello @Account.AccountName !</span>
+
+                                        }
+                                        <p class="description">@UserManager.GetUserName(User)</p>
+                                        <p class="description">Chế độ tài khoản: <span class="code" style="color: #00b14f">Đã xác thực</span></p>
+                                    </div>
+                                </li>
+                                @if (@User.IsInRole("ROLE_ADMIN"))
+                                {
+                                    <li class="navbar-menu__item ">
+                                        <a asp-controller="Industry" asp-action="Index" class="text-sm">
+                                            <i class="icon fa-light fa-screwdriver-wrench"></i>
+                                            Chế độ quản trị viên
+                                        </a>
+                                    </li>
+                                }
+                                @if (@User.IsInRole("ROLE_COMPANY"))
+                                {
+                                    <li class="navbar-menu__item ">
+                                        <a asp-controller="Recruitment" asp-action="Index" class="text-sm">
+                                            <i class="icon fa-light fa-screwdriver-wrench"></i>
+                                            Chế độ nhà tuyển dụng
+                                        </a>
+                                    </li>
+                                }
+                                @if (@User.IsInRole("ROLE_CANDIDATE"))
+                                {
+                                    <li class="navbar-menu__item ">
+                                        <a asp-controller="candidate" asp-action="index" class="text-sm">
+                                            <i class="icon fa-regular fa-pen-to-square"></i>
+                                            Cài đặt thông tin cá nhân
+                                        </a>
+                                    </li>
+                                   @* <li class="navbar-menu__item ">
+                                        <a href="#" class="text-sm">
+                                            <i class="icon fa-regular fa-eye"></i>
+                                            Nhà tuyển dụng xem hồ sơ
+                                        </a>
+                                    </li>*@
+                                }
+                                <li class="navbar-menu__item  tag-border">
+                                    <a href="/ChangePassword" class="text-sm">
+                                        <i class="icon fa-regular fa-lock"></i>
+                                        Đổi mật khẩu
+                                    </a>
+                                </li>
+                                <li class="navbar-menu__item logout">
+                                    <a href="javascript:void(0)" id="logout" onclick="document.getElementById('logoutForm').submit()" class="text-sm">
+                                        <i class="icon fa-regular fa-arrow-right-from-bracket"></i>
+                                        Đăng xuất
+                                    </a>
+                                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Job", new { area = "" })" method="POST">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    <li class="navbar-right__item">
+                        <a class="btn btn-outline-primary" id="login" asp-area="Identity" asp-page="/Account/Login">
+                            Đăng nhập
+                        </a>
+                    </li>
+                    <li class="navbar-right__item">
+                        <a class="btn btn-primary" id="register" asp-area="Identity" asp-page="/Account/Register">
+                            Đăng ký
+                        </a>
+                    </li>
+                    <li class="navbar-right__item">
+                        <a class="btn btn-dark" asp-area="Identity" asp-page="/Account/RegisterCompany">
+                            Đăng tuyển & tìm hồ sơ
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <partial name="_Notification" />
+        <main role="main" class="pb-3">
+            <partial name="_Notification" />
+            @RenderBody()
+        </main>
+    </div>
+
+    <link rel="stylesheet" href="~/css/footer-desktop.min.c66148e4f814e85c.css">
+
+    <footer id="footer-desktop">
+        <div class="footer-main">
+            <div class="footer-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4 class="name-company">
+                                Job Exchange ABCG07
+                            </h4>
+                            <div class="box-tax-code">
+                                <div class="group-top">
+                                    <div class="item">
+                                        <i class="fa-solid fa-calculator"></i>
+                                        <span>Số điện thoại: </span>
+                                        <strong>0999999999</strong>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Địa chỉ: </span>
+                                    <strong>96B Định Công, Hoàng Mai, Hà Nội</strong>
+                                </div>
+                                <div class="item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email: </span>
+                                    <strong>test@gmail.com</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 box-qr">
+                            <div class="box-qr">
+                                <img class="img-responsive" src="~/images/qrABCG07.png">
+                                <a target="_blank" href="https://github.com/WEBG07/job-exchange">github.com/WEBG07/job-exchange</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-20">
+                            <p class="copyright">
+                                © 2023-2023 Job Exchange ABCG07.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+   
+    <script src="~/js/account.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/toastr.js"></script>
+
+    @{
+        var messageInfo = TempData["messageInfo"] as Dictionary<string, string>;
+
+        if (TempData["messageInfo"] != null)
+        {
+            <script>
+                $(document).ready(function () {
+                    showMessage("@messageInfo["text"]", "@messageInfo["type"]", "@messageInfo["title"]", "@messageInfo["icon"]", @messageInfo["delay"]);
+                });
+            </script>
+        }
+    }
+   
+    @await RenderSectionAsync("Scripts", required: false)
+    
+
+</body>
+</html>

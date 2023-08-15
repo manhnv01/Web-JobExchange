@@ -1,0 +1,104 @@
+@model IEnumerable<Company>
+@{
+    ViewData["Title"] = "Company Page";
+}
+<div class="company">
+    <div class="box-search-company">
+        <div class="container d-flex">
+            <div class="box-search">
+                <ul class="nav header">
+                    <li class="nav-item">
+                        <a asp-controller="Company" asp-action="Index" class="nav-link  active ">Danh sách công ty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Company" asp-action="Top" class="nav-link ">Top công ty</a>
+                    </li>
+                </ul>
+                <div class="caption">
+                    <h1 class="title">Khám phá 100+ công ty nổi bật</h1>
+                    <p class="description">Tra cứu thông tin công ty và tìm kiếm nơi làm việc tốt nhất dành cho
+                        bạn</p>
+                </div>
+                <div class="form-search border-hover">
+                    <i class="fa-light fa-magnifying-glass"></i>
+                    <input class="form-control" placeholder="Nhập tên công ty" id="keyword" name="name">
+                    <button id="search-company" class="btn btn-search btn-search-company btn-primary-hover">
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+            <div class="box-img">
+                <img src="v4/image/brand-identity/company-billBoarde209.png?v=1.0.0" class="" alt=""
+                    style="width: 272px !important;">
+            </div>
+        </div>  
+    </div>
+    <div class="featured-companies">
+        <div class="company-header text-center">
+            <h2 class="title">DANH SÁCH CÁC CÔNG TY NỔI BẬT</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                    @foreach (var company in Model)
+                    {
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId">
+                                        <div class="cover-wraper">
+                                        <img src="~/@company.CoverImage"
+                                             alt="@company.CompanyName" class="img-fluid" title="@company.CompanyName">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId">
+                                            <img class="img-fluid"
+                                                src="~/@company.Avatar"
+                                             alt="@company.CompanyName" title="@company.CompanyName">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId" class="company-name"
+                                            target="_blank">@company.CompanyName</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>"@company.Introduce"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('#search-company').addEventListener('click', function() {
+                var keyword = document.getElementById('keyword').value;
+                
+                if (keyword == '')
+                {
+                    alert("please enter name company");
+                    return false;
+                }
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'Company/SearchCompanyAjax', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.querySelector('.featured-companies').innerHTML = '';
+                        document.querySelector('.featured-companies').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send('companyName=' + encodeURIComponent(keyword));
+            })
+        })
+    </script>
+}

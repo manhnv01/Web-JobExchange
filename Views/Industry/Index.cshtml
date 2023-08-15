@@ -1,0 +1,189 @@
+﻿@*@model IEnumerable<JobExchange.Models.Industry>*@
+@model PagedList.IPagedList<Industry>
+@using JobExchange.Models
+@using PagedList;
+
+@{
+    ViewData["Title"] = "Industry";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<div class="container-fluid p-0">
+
+    <div class="mb-3">
+        <h1 class="h3 d-inline align-middle">Quản lý ngành nghề</h1>
+    </div>
+
+    <div class="mb-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onclick="showModal()">
+            <i class="align-middle" data-feather="plus"></i> Thêm mới
+        </button>
+    </div>
+
+    <div class="mb-3">
+        <div class="d-flex justify-content-end">
+            <div class="dataTables_length d-flex align-items-center justify-content-center me-2" id="datatables-reponsive_length">
+                <span class="me-1">Hiện</span>
+                <label class="d-flex">
+                    <form asp-controller="Industry" asp-action="Index">
+                        <select name="size" onchange="this.form.submit()" id="pageSizeSelect" style="width:fit-content" aria-controls="datatables-reponsive" class="form-select form-select-sm">
+                            <option value="5" selected="@(Model.PageSize == 5)">5</option>
+                            <option value="10" selected="@(Model.PageSize == 10)">10</option>
+                            <option value="20" selected="@(Model.PageSize == 20)">20</option>
+                        </select>
+                    </form>
+                </label>
+                <span class="ms-1">mục</span>
+            </div>
+            <div class="input-group w-auto">
+                <span id="reload" class="btn" style="background-color: transparent;">
+                    <i class="fal fa-redo" style="color: #000000;"></i>
+                </span>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Tìm kiếm...">
+                <button id="search" class="btn btn-primary">
+                    <i class="fal fa-search" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-12">
+            <div class="card">
+                <table class="table table-striped" id="tblIndustry">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên ngành nghề</th>
+                            <th>Hình đại diện</th>
+                            <th nowrap>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        @{
+                            int STT = 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                                <tr id="@item.IndustryId">
+                                    <td class="col-1">@STT</td>
+                                    <td class="col-5" id="industry-@item.IndustryId">@Html.DisplayFor(modelItem => item.IndustryName)</td>
+                                    <td class="col-3">
+                                        <img class="rounded" style="width: 250px;" src="/images/industry/@Html.DisplayFor(modelItem => item.IndustryImage)" alt="@Html.DisplayFor(modelItem => item.IndustryName)" />
+                                    </td>
+                                    <td class="table-action col-3">
+                                        <a onclick="getIndustryById(@item.IndustryId)" data-bs-toggle="modal" data-bs-target="#myModal">
+                                            <i class="fal fa-pen" style="color: #000000; margin-right: 25px;"></i>
+                                        </a>
+                                        <a onclick="deleteIndustry(@item.IndustryId)">
+                                            <i class="fal fa-trash" style="color: #000000;"></i>
+                                        </a>
+                                    </td>
+                                </tr>   
+                            STT++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-12 d-flex justify-content-end">
+            <ul class="pagination justify-content-end">
+                <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @{
+                    int startPage = Math.Max(1, Model.PageNumber - 2);
+                    int endPage = Math.Min(startPage + 4, Model.PageCount);
+
+                    if (startPage > 1)
+                    {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = 1 })">1</a>
+                                </li>
+                        if (startPage > 2)
+                        {
+                                        <li class="page-item disabled">
+                                            <a class="page-link">...</a>
+                                        </li>
+                        }
+                    }
+
+                    for (int i = startPage; i <= endPage; i++)
+                    {
+                                <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                </li>
+                    }
+
+                    if (endPage < Model.PageCount)
+                    {
+                        if (endPage < Model.PageCount - 1)
+                        {
+                                        <li class="page-item disabled">
+                                            <a class="page-link">...</a>
+                                        </li>
+                        }
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageCount })">@Model.PageCount</a>
+                                </li>
+                    }
+                }
+                <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close" onclick="resetText()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Tên ngành nghề <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="IndustryName" placeholder="Nhập tên ngành nghề" style="margin-bottom: 5px;" />
+                    <span id="message" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Hình ảnh</label>
+                    <input type="file" multiple class="form-control" id="IndustryImage" style="margin-bottom: 5px;" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="resetText()">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="createOrUpdate()" id="btnConfirm"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/industry.js"></script>
+<script>
+    document.getElementById("IndustryName").addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            createIndustry();
+        }
+    });
+</script>
+
+@*@section Scripts {
+ <script>
+        document.getElementById("pageSizeSelect").addEventListener("change", function () {
+            var selectedPageSize = this.value;
+            var currentUrl = window.location.href;
+
+            var updatedUrl = currentUrl.replace(/pageSize=\d+/, "pageSize=" + selectedPageSize);
+
+            window.location.href = updatedUrl;
+        });
+ </script>
+ }*@

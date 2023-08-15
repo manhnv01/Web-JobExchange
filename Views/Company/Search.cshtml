@@ -1,0 +1,72 @@
+<div id="main">
+    <div class="box-search-company">
+        <div class="container d-flex">
+            <div class="box-search">
+                <h1 class="title">Tìm kiếm thông tin công ty để TopCV kết nối bạn với những <span>cơ hội việc làm</span>
+                    phù hợp nhất</h1>
+                <form action="Search" class="form-search border-hover" method="get" id="frm-search-company">
+                    <i class="fa-light fa-magnifying-glass"></i>
+                    <input class="form-control" placeholder="Nhập tên công ty mà bạn muốn tìm kiếm ..." id="keyword"
+                        name="name">
+                    <button class="btn  btn-search btn-primary-hover" id="btn-search-company" type="submit">
+                        Tìm kiếm
+                    </button>
+                </form>
+            </div>
+            <div class="box-img">
+                <img src="https://www.topcv.vn/v4/image/company-search/img-top.png?v=1.0.0" class="" alt=""
+                    style="width: 190px">
+            </div>
+        </div>
+    </div>
+    <div class="box-result-search-companies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class=" box-result box-white" style="margin-top: 25px;">
+                        @if (ViewData["Count"].ToString() == "0")
+                        {
+                            <p class="count">Không tìm thấy thông tin công ty phù hợp với yêu cầu của bạn. Dưới đây là các công ty nổi bật có thể bạn sẽ quan tâm.</p>
+                        }
+                        else
+                        {
+                            <p class="count">Tìm thấy @ViewData["Count"] công ty phù hợp với yêu cầu của bạn.</p>
+                        }
+                        <div class="">
+                            <div class="result-search-companies">
+                                @foreach (var company in Model)
+                                {
+                                    <div class="result-search-company">
+                                        <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId"
+                                            class="logo">
+                                            <img src="~/images/companies/@company.Avatar"
+                                                alt="@company.CompanyName" title="@company.CompanyName"
+                                                class="img-responsive">
+                                        </a>
+                                        <div class="result-search-company-info">
+                                            <div class="title">
+                                                <strong><a class="company-name"
+                                                        asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId"
+                                                        target="_blank">@company.CompanyName</a></strong>
+                                                <span class="countJob"><i class="fa-solid fa-circle circle"></i> 
+                                                        Đang tuyển @if (company.Recruitments != null) { @company.Recruitments.Count } vị trí
+                                                </span>
+                                            </div>
+                                            <div class="company-address d-flex">
+                                                <i class="fa-solid fa-circle-location-arrow"></i> <span><span
+                                                        style="color: #999999">Trụ sở chính: </span>@company.Address</span>
+                                            </div>
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                    
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

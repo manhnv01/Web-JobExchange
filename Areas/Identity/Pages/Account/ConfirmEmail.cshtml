@@ -1,0 +1,29 @@
+﻿@page "/ConfirmEmail"
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+<div class="wrap-auth-section">
+    <div class="auth row">
+        <div class="auth-form">
+            <div class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="~/images/logo/Logo_ABCG07_OK.png">
+                    </a>
+                </div>
+                <h2 class="title">Xác minh Email của bạn</h2>
+                <div class="text-muted caption">
+                    <partial name="_StatusMessage" model="Model.StatusMessage" />
+                </div>
+                <p style="text-align: center;">
+                    <a asp-controller="Home" asp-action="Index" style="text-align: center;color: #0db14b">
+                        Về trang chủ
+                        <i class="fa-light fa-arrow-right" style="color: #0db14b;"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

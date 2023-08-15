@@ -1,0 +1,148 @@
+﻿@model PagedList.IPagedList<Recruitment>
+@using JobExchange.Models
+@using PagedList;
+@{
+    ViewData["Title"] = "Recruitment";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<div class="container-fluid p-0">
+
+    <div class="mb-3">
+        <h1 class="h3 d-inline align-middle">Quản lý tuyển dụng</h1>
+    </div>
+
+    <div class="mb-3">
+        <a asp-controller="Recruitment" asp-action="Create" type="button" class="btn btn-primary">
+            <i class="align-middle" data-feather="plus"></i> Đăng tin tuyển dụng
+        </a>
+    </div>
+
+    <div class="mb-3">
+        <div class="d-flex justify-content-end">
+            <div class="dataTables_length d-flex align-items-center justify-content-center me-2" id="datatables-reponsive_length">
+                <span class="me-1">Hiện</span>
+                <label class="d-flex">
+                    <form asp-controller="Recruitment" asp-action="Index">
+                        <select name="size" onchange="this.form.submit()" id="pageSizeSelect" style="width:fit-content" aria-controls="datatables-reponsive" class="form-select form-select-sm">
+                            <option value="10" selected="@(Model.PageSize == 10)">10</option>
+                            <option value="20" selected="@(Model.PageSize == 20)">20</option>
+                            <option value="50" selected="@(Model.PageSize == 50)">50</option>
+                        </select>
+                    </form>
+                </label>
+                <span class="ms-1">mục</span>
+            </div>
+            <div class="input-group w-auto">
+                <span id="reload" class="btn" style="background-color: transparent;" onclick="tai_lai_trang()">
+                    <i class="fal fa-redo text-black"></i>
+                </span>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Tìm kiếm...">
+                <button id="search" class="btn btn-primary">
+                    <i class="fal fa-search text-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-12">
+            <div class="card">
+                <table class="table table-striped" id="tblRecruitment">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>ID</th>
+                            <th>Tiêu đề</th>
+                            <th nowrap>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        @{
+                            int STT = 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr id="@item.RecruitmentId">
+                                <td>@STT</td>
+                                <td>@item.RecruitmentId</td>
+                                <td id="recruitment-@item.RecruitmentId">@item.RecruitmentTitle</td>
+                                <td class="table-action">
+                                    <a asp-action="Details" asp-route-id="@item.RecruitmentId" class="ms-1 me-2">
+                                        <i class="fal fa-info text-black"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@item.RecruitmentId" class="me-2">
+                                        <i class="fal fa-pen text-black"></i>
+                                    </a>
+                                    <a onclick="deleteRecruitment('@item.RecruitmentId')">
+                                        <i class="fal fa-trash text-black"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            STT++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-12 d-flex justify-content-end">
+            <ul class="pagination justify-content-end">
+                <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @{
+                    int startPage = Math.Max(1, Model.PageNumber - 2);
+                    int endPage = Math.Min(startPage + 4, Model.PageCount);
+
+                    if (startPage > 1)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", new { page = 1 })">1</a>
+                        </li>
+                        if (startPage > 2)
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link">...</a>
+                            </li>
+                        }
+                    }
+
+                    for (int i = startPage; i <= endPage; i++)
+                    {
+                        <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                        </li>
+                    }
+
+                    if (endPage < Model.PageCount)
+                    {
+                        if (endPage < Model.PageCount - 1)
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link">...</a>
+                            </li>
+                        }
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", new { page = Model.PageCount })">@Model.PageCount</a>
+                        </li>
+                    }
+                }
+                <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="~/js/recruitment.js"></script>
+<script>
+    function tai_lai_trang() {
+        location.reload();
+    }
+</script>
+

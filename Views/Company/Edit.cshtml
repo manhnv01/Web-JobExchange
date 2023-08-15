@@ -1,0 +1,167 @@
+﻿@using JobExchange.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity;
+@model Company
+@inject UserManager<JobExchangeUser> UserManager
+
+@{
+    ViewData["Title"] = "Industry";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+    var Account = await UserManager.GetUserAsync(User) as JobExchangeUser;
+}
+
+
+<div class="mb-3">
+    <h1 class="h3 d-inline align-middle">Chỉnh sửa trang cá nhân</h1>
+</div>
+<form asp-controller="Company" asp-action="Edit" method="post" id="myForm">
+    <input type="hidden" asp-for="CompanyId" />
+    <input type="hidden" asp-for="AccountId" />
+    <input type="hidden" asp-for="Avatar" />
+    <input type="hidden" asp-for="CoverImage" />
+    <div>
+        <div class="company-cover">
+            <div class="container">
+                <div class="company-cover-inner">
+                    <div class="cover-wrapper">
+                        <img draggable="false" src="~/images/companies/@Html.DisplayFor(model => model.CoverImage)" alt="" class="img-responsive cover-img"
+                             width="100%">
+                    </div>
+                    <div class="company-logo">
+                        <div class="company-image-logo">
+                            <img draggable="false" src="~/images/companies/@Html.DisplayFor(model => model.Avatar)"
+                                 class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="company-detail-overview">
+                        <div class="box-detail">
+                            <div class="company-subdetail-info" style="margin-bottom: 20px">
+                                <span class="company-subdetail-info-icon">
+                                    <i class="align-middle me-2" data-feather="briefcase" style="color: #00b14f;"></i>
+                                </span>
+                                <input asp-for="CompanyName" class="form-control" placeholder="Nhập tên công ty của bạn" style="max-width: 441px"/>
+                                <span asp-validation-for="CompanyName" class="text-danger"></span>
+                            </div>
+                            <div class="company-subdetail">
+                                <div class="row">
+                                    <div class="col-md-6" style="margin-bottom: 20px;">
+                                        <div class="company-subdetail-info">
+                                            <span class="company-subdetail-info-icon">
+                                                <i class="align-middle me-2" data-feather="users" style="color: #00b14f;"></i>
+                                            </span>
+                                            <input asp-for="Scale" class="form-control" placeholder="Ví dụ: 100 - 200" />
+                                        </div>
+                                        <span asp-validation-for="Scale" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="company-subdetail-info">
+                                            <span class="company-subdetail-info-icon">
+                                                <i class="align-middle me-2" data-feather="tag" style="color: #00b14f;"></i>
+                                            </span>
+                                            <select asp-for="IndustryId" class="form-control" asp-items="ViewBag.IndustryId" id="mySelect">
+                                                <option value="0">-- Chọn ngành nghề --</option>
+                                            </select>
+                                        </div>
+                                        <span class="text-danger" id="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-follow">
+                            <button type="submit" class="btn btn-follow" style="width: fit-content; margin-bottom: 20px">
+                                <span><i class="align-middle me-2" data-feather="save" style="color: #00b14f;"></i></span>
+                                Lưu thay đổi
+                            </button>
+                            <a asp-controller="Company" asp-action="Profile" class="btn btn-follow" style="width: fit-content; padding-right: 44px;">
+                                <span><i class="align-middle me-2" data-feather="arrow-left" style="color: #00b14f;"></i></span>
+                                Quay lại
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="section-introduce">
+                            <div class="company-info">
+                                <h4 class="title">Giới thiệu công ty</h4>
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <textarea asp-for="Introduce" class="form-control" style="height: 262px;" placeholder="Nhập thông tin giới thiệu công ty của bạn..."></textarea>
+                                            <span asp-validation-for="Introduce" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="section-contact">
+                            <h4 class="title">Thông tin liên hệ</h4>
+                            <div class="box-body">
+                                <div class="item" style="border-bottom: 0px solid White;">
+                                    <div class="box-caption">
+                                        <i class="align-middle me-2" data-feather="map-pin" style="color: #00b14f;"></i>
+                                        <span>Địa chỉ công ty</span>
+                                    </div>
+                                    <div class="desc">
+                                        <input asp-for="Address" class="form-control" placeholder="Ví dụ: Số xx Ngõ xx Định Công, Hoàng Mai, Hà Nội" />
+                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="item" style="border-bottom: 0px solid White;">
+                                    <div class="box-caption">
+                                        <i class="align-middle me-2" data-feather="at-sign" style="color: #00b14f;"></i>
+                                        <span>Email</span>
+                                    </div>
+                                    <div class="desc">
+                                        <input class="form-control" value="@UserManager.GetUserName(User)" disabled />
+                                    </div>
+                                </div>
+                                <div class="item" style="border-bottom: 0px solid White;">
+                                    <div class="box-caption">
+                                        <i class="align-middle me-2" data-feather="phone" style="color: #00b14f;"></i>
+                                        <span>Số điện thoại</span>
+                                    </div>
+                                    <div class="desc">
+                                        <input asp-for="Phone" class="form-control" placeholder="Nhập số điện thoại" />
+                                        <span asp-validation-for="Phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <script>
+        document.getElementById("mySelect").onchange = function () {
+            var selectValue = document.getElementById("mySelect").value;
+
+            if (selectValue === "0") {
+                document.getElementById("error").innerHTML = "Vui lòng chọn lĩnh vực !"
+            }
+            else {
+                document.getElementById("error").innerHTML = ""
+            }
+        };
+
+        document.getElementById("myForm").onsubmit = function (event) {
+            var selectValue = document.getElementById("mySelect").value;
+
+            if (selectValue === "0") {
+                event.preventDefault();
+                document.getElementById("error").innerHTML = "Vui lòng chọn lĩnh vực !"
+            }
+            else {
+                document.getElementById("error").innerHTML = ""
+            }
+        };
+    </script>
+}

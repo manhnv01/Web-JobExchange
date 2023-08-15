@@ -1,0 +1,26 @@
+﻿@page "/AccessDenied"
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access denied";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+
+<div class="wrap-auth-section">
+    <div class="auth row">
+        <div class="auth-form">
+            <div class="logo">
+                <a href="#">
+                    <img src="~/images/AccessDenied.png">
+                </a>
+            </div>
+            <p style="text-align: center;">Bạn không có quyền truy cập vào tài nguyên này !</p>
+            <p style="text-align: center;">
+                <a asp-controller="Home" asp-action="Index" style="text-align: center;color: #0db14b">
+                    Về trang chủ
+                    <i class="fa-light fa-arrow-right" style="color: #0db14b;"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+

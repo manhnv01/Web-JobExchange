@@ -1,0 +1,136 @@
+﻿@using JobExchange.Helper;
+@model List<SaveRecruitment>
+@{
+    ViewData["Title"] = "SavedJobs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://static.topcv.vn/v4/css/components/desktop/job-save.min.d88c8255578e7d64.css">
+<div id="main">
+    <div class="container" id="box-save-job">
+        <div class="row">
+            <div class="col-md-12">
+                @if (@Model.Count == 0)
+                {
+                    <div class="box-white">
+                    <div class="banner">
+                        <div class="content">
+                            <h1 class="title">Việc làm đã lưu</h1>
+                            <p class="description">
+                                Xem lại danh sách những việc làm mà bạn đã lưu trước đó. Ứng
+                                tuyển ngay để không bỏ lỡ cơ hội
+                                nghề nghiệp dành cho bạn.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="https://www.topcv.vn/v4/image/featured-job-list/arrow_desktop.png"
+                                 alt="Việc làm từ xa (remote) background" title="Việc làm từ xa (remote) background"
+                                 class="w-100">
+                        </div>
+                    </div>
+                    <div class="empty">
+                        <img src="https://www.topcv.vn/v4/image/empty.png" alt="Empty">
+                        <p>Bạn chưa lưu công việc nào!</p>
+                        <a asp-controller="Job" asp-action="Index" class="btn-seatch-job btn-primary-hover">
+                            Tìm việc
+                            ngay
+                        </a>
+                    </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="box-white">
+                        <div class="banner">
+                            <div class="content">
+                                <h1 class="title">Việc làm đã lưu</h1>
+                                <p class="description">
+                                    Xem lại danh sách những việc làm mà bạn đã lưu trước đó. Ứng tuyển ngay để không bỏ lỡ cơ hội
+                                    nghề nghiệp dành cho bạn.
+                                </p>
+                            </div>
+                            <div class="image">
+                                <img src="https://www.topcv.vn/v4/image/featured-job-list/arrow_desktop.png" alt="Việc làm từ xa (remote) background" title="Việc làm từ xa (remote) background" class="w-100">
+                            </div>
+                        </div>
+                        <div class="box-job-total">
+                            Danh sách <strong>@Model.Count</strong> việc làm đã lưu
+                        </div>
+                        @*                    <form method="get" id="frm-search-job">
+                    <div class="show-important" id="sort-advanced">
+                    <span>Ưu tiên hiển thị:</span>
+                    <input type="text" name="sort" hidden="">
+                    <div sort-value="up_top" class="option-item-sort  active ">
+                    <i class="fa-solid fa-circle-check first"></i>
+                    <i id="up_top" class="fa-regular fa-circle last"></i>
+                    <span class="name_sort" for="up_top">Cập nhật gần nhất</span>
+                    </div>
+                    <div sort-value="urgent" class="option-item-sort ">
+                    <i class="fa-solid fa-circle-check first"></i>
+                    <i id="urgent" class="fa-regular fa-circle last"></i>
+                    <span class="name_sort" for="urgent">Cần tuyển gấp</span>
+                    </div>
+                    <div sort-value="high_salary" class="option-item-sort ">
+                    <i class="fa-solid fa-circle-check first"></i>
+                    <i id="high_salary" class="fa-regular fa-circle last"></i>
+                    <span class="name_sort" for="high_salary">Lương cao nhất</span>
+                    </div>
+                    </div>
+                    </form>*@
+                        <div class="lists">
+                            <link rel="stylesheet" href="https://static.topcv.vn/v4/css/components/desktop/jobs/job-list-default.54c1c7011c100262.css">
+                            <div class="job-list-default job-list-saved">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="job-item-default
+                                 bg-highlight  job-ta" data-job-id="1068374" data-job-position="2" data-box="BoxSearchResult">
+                                        <div class="avatar">
+                                            <a asp-controller="Job" asp-action="DefaultJob" asp-route-id="@item.Recruitment.RecruitmentId" target="_blank">
+                                                <img src="~/images/companies/@item.Recruitment.Company.Avatar" class="w-100" alt="@item.Recruitment.Company.CompanyName" title="@item.Recruitment.RecruitmentTitle">
+                                            </a>
+                                        </div>
+                                        <div class="body">
+                                            <div class="title-block">
+                                                <h3 class="title">
+                                                    <a asp-controller="Job" asp-action="DefaultJob" asp-route-id="@item.Recruitment.RecruitmentId" target="_blank" class="highlight">
+                                                        <span>@item.Recruitment.RecruitmentTitle</span>
+                                                    </a>
+                                                </h3>
+                                                <label class="title-salary"> @FormatHelper.FormatCurrency(item.Recruitment.Salary)</label>
+                                            </div>
+                                            <a asp-controller="Company" asp-action="Detail" asp-route-id="@item.Recruitment.CompanyId" class="company" data-toggle="tooltip" title="" data-placement="top" data-container="body" target="_blank" data-original-title="@item.Recruitment.Company.CompanyName">
+                                                @item.Recruitment.Company.CompanyName
+                                            </a>
+                                            <label class="time_save_job">Đã lưu: @item.CreateDate</label>
+                                            <div class="info">
+                                                <div class="label-content">
+                                                    <label class="address" data-toggle="tooltip" data-html="true" title="">
+                                                        @item.Recruitment.District, @item.Recruitment.City
+                                                    </label>
+                                                </div>
+                                                <div class="icon">
+                                                    <button class="btn btn-apply-now">
+                                                        <span>Ứng tuyển</span>
+                                                    </button>
+                                                    <div id="box-save-job-1068374" class="box-save-job is-page-job-save" onclick="unSave('@item.Recruitment.RecruitmentId')">
+                                                        <a href="javascript:void(0)" class="btn-unsave unsave text-red" data-id="1068374">
+                                                            <i class="fa-regular fa-trash"></i> Bỏ lưu
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="text-center">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="~/js/savejob.js"></script>

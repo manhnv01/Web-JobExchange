@@ -1,0 +1,133 @@
+﻿@using JobExchange.Areas.Identity.Data;
+@using Microsoft.AspNetCore.Identity;
+@model Company
+@inject UserManager<JobExchangeUser> UserManager
+
+@{
+    ViewData["Title"] = "Industry";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+    var Account = await UserManager.GetUserAsync(User) as JobExchangeUser;
+}
+
+<style>
+    .profile-image:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+        .profile-image:hover .camera-icon {
+            display: block;
+        }
+
+    }
+</style>
+
+<div class="mb-3">
+    <h1 class="h3 d-inline align-middle">Trang cá nhân</h1>
+</div>
+
+<div>
+    <div class="company-cover">
+        <div class="container">
+            <div class="company-cover-inner">
+                <div class="cover-wrapper">
+                    <input type="file" accept="image/*" id="cover_file" style="display: none;" onchange="chooseCoverFile(this)">
+                    <img draggable="false" src="~/images/companies/@Html.DisplayFor(model => model.CoverImage)" alt="" class="img-responsive cover-img profile-image" id="change-cover"
+                         width="100%" style="object-fit: cover">
+                </div>
+                <div class="company-logo">
+                    <input type="file" accept="image/*" id="avatar_file" style="display: none;" onchange="chooseFile(this)">
+                    <div class="company-image-logo">
+                        <img src="~/images/companies/@Html.DisplayFor(model => model.Avatar)" alt="@Html.DisplayFor(model => model.CompanyName)"
+                             class="img-responsive profile-image" id="change-avatar">
+                    </div>
+                </div>
+                <div class="company-detail-overview">
+                    <div class="box-detail">
+                        <h1 data-toggle="tooltip" title="@Html.DisplayFor(model => model.CompanyName)"
+                            class="company-detail-name text-highlight">
+                            @Html.DisplayFor(model => model.CompanyName)
+                        </h1>
+                        <div class="company-subdetail">
+                            <div class="company-subdetail-info">
+                                <span class="company-subdetail-info-icon">
+                                    <i class="align-middle me-2" data-feather="users" style="color: #00b14f;"></i>
+                                </span>
+                                <span class="company-subdetail-info-text">@Html.DisplayFor(model => model.Scale) nhân viên</span>
+                            </div>
+                            <div class="company-subdetail-info">
+                                <span class="company-subdetail-info-icon">
+                                    <i class="align-middle me-2" data-feather="tag" style="color: #00b14f;"></i>
+                                </span>
+                                <span class="company-subdetail-info-text">@Html.DisplayFor(model => model.Industry.IndustryName)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-follow">
+                        <a asp asp-controller="Company" asp-action="Edit" asp-route-id="@UserManager.GetUserId(User)" class="btn btn-follow" style="width: 210px;">
+                            <span><i class="align-middle me-2" data-feather="edit-2" style="color: #00b14f;"></i></span>
+                            Chỉnh sửa thông tin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="section-introduce">
+                        <div class="company-info">
+                            <h4 class="title">Giới thiệu công ty</h4>
+                            <div style="padding: 20px;">
+                                <div>
+                                    <p>@Html.DisplayFor(model => model.Introduce)</p>
+                                    <div class="temp"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="section-contact">
+                        <h4 class="title">Thông tin liên hệ</h4>
+                        <div class="box-body">
+                            <div class="item">
+                                <div class="box-caption">
+                                    <i class="align-middle me-2" data-feather="map-pin" style="color: #00b14f;"></i>
+                                    <span>Địa chỉ công ty</span>
+                                </div>
+                                <div class="desc">
+                                    @Html.DisplayFor(model => model.Address)
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box-caption">
+                                    <i class="align-middle me-2" data-feather="at-sign" style="color: #00b14f;"></i>
+                                    <span>Email</span>
+                                </div>
+                                <div class="desc">
+                                    @UserManager.GetUserName(User)
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box-caption">
+                                    <i class="align-middle me-2" data-feather="phone" style="color: #00b14f;"></i>
+                                    <span>Số điện thoại</span>
+                                </div>
+                                <div class="desc">
+                                    @Html.DisplayFor(model => model.Phone)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/company.js"></script>
+}

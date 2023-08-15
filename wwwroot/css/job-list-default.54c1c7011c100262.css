@@ -1,0 +1,596 @@
+.job-list-default .job-item-default {
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    grid-template-columns: 1fr 5fr;
+    margin: auto auto 16px;
+    padding: 16px;
+    position: relative;
+    transition: all .1s
+}
+
+.job-list-default .job-item-default.bg-highlight {
+    background-color: #f2fbf6
+}
+
+.job-list-default .job-item-default.bg-highlight:hover {
+    background-color: #f2fbf6;
+    border: 1px solid #00b14f
+}
+
+.job-list-default .job-item-default.bg-vip-employer {
+    background: rgba(0, 120, 255, .08) !important
+}
+
+.job-list-default .job-item-default.bg-vip-employer .title a {
+    color: #0078ff !important
+}
+
+.job-list-default .job-item-default.bg-vip-employer:hover {
+    border: 1px solid #0078ff
+}
+
+.job-list-default .job-item-default.bg-diamond-employer {
+    background: #f2fbf6 !important;
+    border-left: 4px solid #00b14f !important
+}
+
+.job-list-default .job-item-default.bg-diamond-employer:hover {
+    border: 1px solid #00b14f
+}
+
+.job-list-default .job-item-default.bg-flash-job .avatar {
+    background-image: linear-gradient(201.63deg, #003e86 14.36%, #02d15e 95.71%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 2px;
+    position: relative
+}
+
+.job-list-default .job-item-default.bg-flash-job .avatar a {
+    background: #fff;
+    border-radius: 6px;
+    padding: 8px
+}
+
+.job-list-default .job-item-default.bg-flash-job .avatar a img {
+    background: #fff
+}
+
+.job-list-default .job-item-default:last-child {
+    margin-bottom: 0
+}
+
+.job-list-default .job-item-default .avatar {
+    align-items: center;
+    aspect-ratio: 1/1;
+    background: #fff;
+    background-color: #fff;
+    border: 1px solid #e9eaec;
+    border-radius: 8px;
+    display: flex;
+    height: 100px;
+    margin: 0 auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: 8px;
+    position: relative;
+    width: 100px
+}
+
+.job-list-default .job-item-default .avatar a {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
+
+.job-list-default .job-item-default .avatar img {
+    border-radius: 5px;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.job-list-default .job-item-default .body {
+    display: inline-grid;
+    gap: 12px;
+    width: 100%
+}
+
+.job-list-default .job-item-default .body-content {
+    min-width: 11vh
+}
+
+.job-list-default .job-item-default .body .title-block {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.job-list-default .job-item-default .body .title-salary {
+    align-items: center;
+    color: #00b14f;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 10px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    white-space: nowrap
+}
+
+.job-list-default .job-item-default .body .title {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #212f3f;
+    display: -webkit-box;
+    flex: 1;
+    font-weight: 600;
+    line-height: 0;
+    margin-bottom: 4px;
+    margin-right: 24px;
+    margin-top: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis
+}
+
+.job-list-default .job-item-default .body .title .box-label-top {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 0
+}
+
+.job-list-default .job-item-default .body .title .box-label-top:not(:has(label)) {
+    display: none !important
+}
+
+.job-list-default .job-item-default .body .title a {
+    color: #212f3f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px
+}
+
+.job-list-default .job-item-default .body .title a.highlight {
+    color: #ff453a
+}
+
+.job-list-default .job-item-default .body .title a:hover {
+    text-decoration: none
+}
+
+.job-list-default .job-item-default .body .company {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #424e5c;
+    display: -webkit-box;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.job-list-default .job-item-default .body .company:hover {
+    text-decoration: none
+}
+
+.job-list-default .job-item-default .body label.deadline,
+.job-list-default .job-item-default .body label.time_save_job {
+    color: #424e5c;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.job-list-default .job-item-default .body ul.top-addon {
+    list-style: disc;
+    list-style-position: inside
+}
+
+.job-list-default .job-item-default .body ul.top-addon li {
+    color: #00b14f;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 5px
+}
+
+.job-list-default .job-item-default .body .icon-verified-employer {
+    color: #00b14f;
+    font-size: 13px
+}
+
+.job-list-default .job-item-default .body .icon-verified-employer .text-gray {
+    color: #777 !important
+}
+
+.job-list-default .job-item-default .body .icon-verified-employer.level-five>i {
+    color: #00b14f
+}
+
+.job-list-default .job-item-default .body .icon-verified-employer.level-four>i {
+    color: #777 !important
+}
+
+.job-list-default .job-item-default .body .info {
+    align-items: flex-end;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    display: flex;
+    justify-content: space-between
+}
+
+.job-list-default .job-item-default .body .label-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.job-list-default .job-item-default .body .label-content label {
+    background: #e9eaec;
+    border-radius: 3px;
+    color: #212f3f;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 4px 8px
+}
+
+.job-list-default .job-item-default .body .label-content .time_save_job {
+    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px
+}
+
+.job-list-default .job-item-default .body .label {
+    background: #edeef0;
+    border-radius: 3px;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px 12px
+}
+
+.job-list-default .job-item-default .body .label.tag-employer-vip {
+    background: #0078ff
+}
+
+.job-list-default .job-item-default .body .label.label-primary {
+    background: #00b14f
+}
+
+.job-list-default .job-item-default .body .label.label-warning {
+    background: #ff7200
+}
+
+.job-list-default .job-item-default .body .label.label-danger {
+    background: #c83f31
+}
+
+.job-list-default .job-item-default .icon {
+    align-items: flex-end;
+    display: flex;
+    gap: 8px
+}
+
+.job-list-default .job-item-default .icon .btn.btn-apply-now {
+    align-items: center;
+    background: #00b14f;
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    height: 28px;
+    line-height: 16px;
+    outline: none;
+    padding: 6px 16px
+}
+
+.job-list-default .job-item-default .box-save-job {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.job-list-default .job-item-default .box-save-job a {
+    align-items: center;
+    background: #e5f7ed;
+    color: #00b14f;
+    display: inline-flex;
+    font-size: 15px;
+    height: 28px;
+    justify-content: center;
+    padding: 0 8px;
+    white-space: nowrap;
+    width: 28px
+}
+
+.job-list-default .job-item-default .box-save-job.job-notsave a.unsave,
+.job-list-default .job-item-default .box-save-job.job-saved a.save {
+    display: none
+}
+
+.job-list-default .job-item-default .is-page-job-save a {
+    align-items: center;
+    background: #e9eaec;
+    color: #424e5c;
+    display: inline-flex;
+    width: auto
+}
+
+.job-list-default .job-item-default .is-page-job-save a i {
+    margin-right: 10px;
+    margin-top: -.2px
+}
+
+.job-list-default .job-item-default .btn-remove-job a {
+    align-items: center;
+    background: #f4f4f4;
+    border-radius: 3px;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    padding: 5px;
+    width: 28px
+}
+
+.job-list-default .job-item-default .btn-remove-job a i {
+    color: #999;
+    transition: .4s
+}
+
+.job-list-default .job-item-default .btn-remove-job:hover i {
+    transform: scale(1.2)
+}
+
+.job-list-default .job-item-default:hover {
+    background: #f6f6f6
+}
+
+.job-list-default .job-item-default:hover .body .title a {
+    color: #00b14f
+}
+
+.job-list-default .job-item-default .tag-job-flash {
+    left: -11px;
+    position: absolute;
+    top: -21px
+}
+
+.job-list-default .job-item-default .tag-job-flash img {
+    height: 33.76px;
+    width: 24px
+}
+
+.icon-verified-employer-tooltip .tooltip-inner {
+    max-width: 100% !important;
+    padding: 6px 8px !important;
+    text-align: left !important;
+    text-transform: unset !important
+}
+
+@media screen and (min-width:321px) and (max-width:767px) {
+    .job-list-default .job-item-default {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding: 16px
+    }
+
+    .job-list-default .job-item-default .avatar {
+        height: 60px;
+        padding: 4px;
+        width: 60px
+    }
+
+    .job-list-default .job-item-default .body {
+        margin-left: 0
+    }
+
+    .job-list-default .job-item-default .body .title-block {
+        display: grid
+    }
+
+    .job-list-default .job-item-default .body .title-salary {
+        background: #e5f7ed;
+        border-radius: 5px;
+        color: #00b14f;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-top: 8px;
+        padding: 4px 10px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content
+    }
+
+    .job-list-default .job-item-default .body .info {
+        align-items: flex-end;
+        -moz-column-gap: 8px;
+        column-gap: 8px;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .job-list-default .job-item-default .body .title {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        color: #212f3f;
+        display: -webkit-box;
+        flex: 1;
+        font-weight: 600;
+        line-height: 0;
+        margin-bottom: 4px;
+        margin-right: 24px;
+        margin-top: 0;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        text-overflow: ellipsis
+    }
+
+    .job-list-default .job-item-default .body .title .box-label-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 0
+    }
+
+    .job-list-default .job-item-default .body .title a {
+        color: #212f3f;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px
+    }
+
+    .job-list-default .job-item-default .body .title a.highlight {
+        color: #ff453a
+    }
+
+    .job-list-default .job-item-default .body .title a:hover {
+        text-decoration: underline
+    }
+
+    .job-list-default .job-item-default .body .company {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        color: #6f7882;
+        display: -webkit-box;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-top: 0;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        text-overflow: ellipsis
+    }
+
+    .job-list-default .job-item-default .body .company:hover {
+        text-decoration: underline
+    }
+
+    .job-list-default .job-item-default .body ul.top-addon {
+        padding-left: 10px
+    }
+
+    .job-list-default .job-item-default .icon .btn.btn-apply-now {
+        display: none
+    }
+}
+
+.max-width-438 .job-list-default .job-item-default {
+    border-radius: 8px
+}
+
+.max-width-438 .job-list-default .job-item-default.bg-flash-job .avatar {
+    padding: 2px
+}
+
+.max-width-438 .job-list-default .job-item-default .avatar {
+    border-radius: 6.4px;
+    height: 80px;
+    padding: 6.4px;
+    width: 80px
+}
+
+.max-width-438 .job-list-default .job-item-default .body {
+    gap: 0
+}
+
+.max-width-438 .job-list-default .job-item-default .body .title-block {
+    flex-direction: column;
+    margin-bottom: 8px
+}
+
+.max-width-438 .job-list-default .job-item-default .body .title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    width: 100%
+}
+
+.max-width-438 .job-list-default .job-item-default .body .title a {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .175px;
+    line-height: 20px
+}
+
+.max-width-438 .job-list-default .job-item-default .body .title .box-label-top {
+    margin-bottom: 5px
+}
+
+.max-width-438 .job-list-default .job-item-default .body .company {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 4px
+}
+
+.max-width-438 .job-list-default .job-item-default .body .label-content label {
+    background: #f4f5f5
+}
+
+.max-width-438 .job-list-default .job-item-default .body .label-content .deadline,
+.max-width-438 .job-list-default .job-item-default .body .label-content .time {
+    display: none
+}
+
+.max-width-438 .job-list-default .job-item-default .body .title-salary {
+    background: #e5f7ed;
+    padding: 2px 12px
+}
+
+.max-width-438 .job-list-default .job-item-default .body .btn-apply-now {
+    display: none
+}
+
+.max-width-438 .job-list-default .job-item-default .body ul.top-addon {
+    list-style: none;
+    margin-bottom: 6px;
+    padding: 0
+}
+
+.max-width-438 .job-list-default .job-item-default .body ul.top-addon li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px
+}
+
+.max-width-438 .job-list-default .job-item-default .body ul.top-addon li:before {
+    content: url(/v4/image/icon/verify.png);
+    height: 16px;
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+    width: 16px
+}

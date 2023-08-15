@@ -1,0 +1,43 @@
+@model List<Company>
+@if (Model.Any())
+{
+    <div class="company-header text-center">
+        <h2 class="title">Kết quả tìm kiếm</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var company in Model)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="box-company item-hover">
+                        <div class="company-banner">
+                            <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId">
+                                <div class="cover-wraper">
+                                    <img src="~/@company.CoverImage" alt="@company.CompanyName" class="img-fluid">
+                                </div>
+                            </a>
+                            <div class="company-logo">
+                                <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId">
+                                    <img class="img-fluid" src="~/@company.Avatar" alt="TỔ CHỨC GIÁO DỤC FPT">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="company-info">
+                            <h3>
+                                <a asp-controller="Company" asp-action="Detail" asp-route-id="@company.CompanyId"
+                                    class="company-name" target="_blank">@company.CompanyName</a>
+                            </h3>
+                            <div class="company-description">
+                                <p>" @company.Introduce"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger mt-2">Không có kết quả phù hợp</div>
+}
